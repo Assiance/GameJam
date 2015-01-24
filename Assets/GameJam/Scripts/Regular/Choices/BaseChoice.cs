@@ -8,7 +8,7 @@ namespace Assets.GameJam.Scripts.Regular.Choices
 {
     public class BaseChoice : MyMonoBehaviour, IChoice
     {
-        public int ResourcesModifier = -2;
+        public int ResourcesModifier = 0;
         public int PopulationModifier = 0;
         public int MoraleModifier = 0;
 
@@ -29,9 +29,9 @@ namespace Assets.GameJam.Scripts.Regular.Choices
         public virtual void Execute()
         {
             var playerstats = gameObject.GetComponent<PlayerStats>();
-            playerstats.Resources += ResourcesModifier;
-            playerstats.Population += PopulationModifier;
-            playerstats.Morale += MoraleModifier;
+            playerstats.Resources += playerstats.Skill == "Resources" ? (int)(ResourcesModifier * playerstats.SkillMultiplier) : ResourcesModifier;
+            playerstats.Population += playerstats.Skill == "Population" ? (int)(PopulationModifier * playerstats.SkillMultiplier) : PopulationModifier;
+            playerstats.Morale += playerstats.Skill == "Morale" ? (int)(MoraleModifier * playerstats.SkillMultiplier) : MoraleModifier;
         }
 
         public virtual string Name
