@@ -12,6 +12,8 @@ namespace Assets.GameJam.Scripts.Regular.Choices
         public int PopulationModifier = 0;
         public int MoraleModifier = 0;
 
+        public bool DoExecute { get; set; }
+
         public virtual bool Disabled
         {
             get
