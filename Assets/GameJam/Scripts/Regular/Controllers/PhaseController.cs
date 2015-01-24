@@ -82,6 +82,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             {
                 phaseNumber++;
                 roundNumber = 0;
+                StartNewRound();
                 //StateController InitiatePHase
             }
             else

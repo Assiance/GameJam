@@ -49,13 +49,18 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             Scenarios = new List<BaseScenario>();
             Choices = new List<BaseChoice>();
 
+            InitiateBrain();
+        }
+
+        public void InitiateBrain()
+        {
             var players = FindObjectsOfType<PlayerStatus>();
             foreach (var player in players)
             {
-                PlayerStats.Add(player.GetComponent<PlayerStatus>());
-                Events.Add(player.GetComponent<BaseEvent>());
-                Scenarios.Add(player.GetComponent<BaseScenario>());
-                Choices.Add(player.GetComponent<BaseChoice>());
+                PlayerStats.AddRange(player.GetComponents<PlayerStatus>());
+                Events.AddRange(player.GetComponents<BaseEvent>());
+                Scenarios.AddRange(player.GetComponents<BaseScenario>());
+                Choices.AddRange(player.GetComponents<BaseChoice>());
             }
         }
 
