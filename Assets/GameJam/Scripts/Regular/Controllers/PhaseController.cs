@@ -4,21 +4,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Assets.GameJam.Scripts.Regular.Choices;
+using Assets.GameJam.Scripts.Regular.Events;
 using Assets.GameJam.Scripts.Regular.General;
+using Assets.GameJam.Scripts.Regular.Scenarios;
 using UnityEngine;
 
 namespace Assets.GameJam.Scripts.Regular.Controllers
 {
     public class PhaseController : MyMonoBehaviour
     {
-        public int TotalRounds;
-        public int TotalPhases;
-        private int RoundNumber = 3;
-        private int PhaseNumber = 3;
+        public int TotalRounds = 3;
+        public int TotalPhases = 3;
+        private int roundNumber;
+        private int phaseNumber;
         public float RoundTime = 15f;
 
         void Start()
         {
+            AddScenariosToPlayers();
+            AddEventsToPlayers();
+            StateController.Instance.InitiateBrain();
+
+            foreach (var theEvent in StateController.Instance.Events)
+            {
+                theEvent.Execute();
+            }
+
             StartCoroutine(StartTimer());
         }
 
@@ -32,7 +43,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         public void CycleRound()
         {
             Debug.Log("Cycle The Round");
-            Debug.Log("Exeecuting Choices");
+            Debug.Log("Executing Choices");
             foreach (var player in StateController.Instance.PlayerStats)
             {
                 var choices = player.gameObject.GetComponents<BaseChoice>();
@@ -46,14 +57,15 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             Debug.Log("Update Players");
             UpdatePlayers();
 
-            if (RoundNumber < TotalRounds)
+            if (roundNumber < TotalRounds)
             {
-                RoundNumber++;
+                roundNumber++;
                 StartNewRound();
             }
             else
             {
-                RoundNumber = 0;
+                roundNumber = 0;
+                Debug.Log("Cycle Phase");
                 CyclePhase();
                 //StateController NewPhas
             }
@@ -66,9 +78,10 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
                 scenario.Execute();
             }
 
-            if (PhaseNumber < TotalPhases)
+            if (phaseNumber < TotalPhases)
             {
-                PhaseNumber++;
+                phaseNumber++;
+                roundNumber = 0;
                 //StateController InitiatePHase
             }
             else
@@ -96,6 +109,26 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             foreach (var player in StateController.Instance.PlayerStats)
             {
                 player.UpdateText();
+            }
+        }
+
+        public void AddScenariosToPlayers()
+        {
+            Debug.Log("Adding Scenarios to Players");
+            //TODO: Add Random Scenarios
+            foreach (var player in StateController.Instance.PlayerStats)
+            {
+                player.gameObject.AddComponent<OverConsumptionScenario>();
+            }
+        }
+
+        public void AddEventsToPlayers()
+        {
+            Debug.Log("Adding Events to Players");
+            //TODO: Add Random Scenarios
+            foreach (var player in StateController.Instance.PlayerStats)
+            {
+                player.gameObject.AddComponent<TornadoEvent>();
             }
         }
     }
