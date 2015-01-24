@@ -1,4 +1,5 @@
-﻿using Assets.GameJam.Scripts.Regular.General;
+﻿using System.Collections;
+using Assets.GameJam.Scripts.Regular.General;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,16 +14,23 @@ namespace Assets.GameJam.Scripts.Regular
     {
             private const string typeName = "UniqueGameName";
             private const string gameName = "RoomName";
-            private string ip = "169.254.110.43";
-            private int port = 50005;
+            private string ip = "169.254.110.43"; //not used
+            private int port = 50005; //not used
             private HostData[] hostList;
 
-            void Awake()
+            public void GetHostListAndConnect()
             {
                 hostList = new HostData[1];
-                MasterServer.RequestHostList("UniqueGameName");
+                MasterServer.RequestHostList(typeName);
+
+                StartCoroutine(Connect());
             }
 
+            public IEnumerator Connect()
+            {
+                yield return new WaitForSeconds(2f);
+                Network.Connect(hostList[0]);
+            }
             void OnMasterServerEvent(MasterServerEvent msEvent)
             {
                 if (msEvent == MasterServerEvent.HostListReceived)
@@ -45,7 +53,7 @@ namespace Assets.GameJam.Scripts.Regular
                 // connect to the IP and port
                 if (GUILayout.Button("Connect", GUILayout.Width(100f)))
                 {
-                    Network.Connect(hostList[0]);
+                    GetHostListAndConnect();
                 }
    
                 if (GUILayout.Button("Host", GUILayout.Width(100f)))
