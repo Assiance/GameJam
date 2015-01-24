@@ -310,6 +310,7 @@ GameObject:
   - 114: {fileID: 864973290}
   - 114: {fileID: 864973294}
   - 114: {fileID: 864973295}
+  - 114: {fileID: 864973296}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -387,7 +388,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0e0326fcf6b0146af30cfce0e003f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MasterServerIP: 127.0.0.1
+  MasterServerIP: 169.254.110.43
+--- !u!114 &864973296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864973289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d43ba547ddd16f4bb1b8c45c6267b94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &922822292
 GameObject:
   m_ObjectHideFlags: 0
