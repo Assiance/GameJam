@@ -49,6 +49,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             if (RoundNumber < TotalRounds)
             {
                 RoundNumber++;
+                
                 //StateController New Round
             }
             else
@@ -74,6 +75,28 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             else
             {
                 //END GAME
+            }
+        }
+
+        public void StartNewRound()
+        {
+            ResetChoices();
+            StartCoroutine(StartTimer());
+        }
+
+        public void ResetChoices()
+        {
+            foreach (var choice in StateController.Instance.Choices)
+            {
+                choice.DoExecute = false;
+            }
+        }
+
+        public void UpdatePlayers()
+        {
+            foreach (var player in StateController.Instance.PlayerStats)
+            {
+                player.UpdateText();
             }
         }
     }

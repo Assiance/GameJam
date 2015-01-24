@@ -63,16 +63,5 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         {
             return PlayerStats.First(i => i.PlayerId == playerNumber);
         }
-
-        public void UpdatePlayers()
-        {
-            foreach (var player in PlayerStats)
-            {
-                player.UpdateText();
-            }
-        }
-
-       
-
     }
 }
