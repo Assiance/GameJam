@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Assets.GameJam.Scripts.Regular.Choices;
 using Assets.GameJam.Scripts.Regular.General;
 using UnityEngine;
 
@@ -18,7 +19,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 
         void Start()
         {
-            
+            StartCoroutine(StartTimer());
         }
 
         IEnumerator StartTimer()
@@ -30,9 +31,11 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 
         public void CycleRound()
         {
+            Debug.Log("Cycle The Round");
+            Debug.Log("Exeecuting Choices");
             foreach (var player in StateController.Instance.PlayerStats)
             {
-                IChoice[] choices = player.gameObject.GetComponents(typeof (IChoice)) as IChoice[];
+                var choices = player.gameObject.GetComponents<BaseChoice>();
 
                 foreach (IChoice choice in choices.Where(i => i.DoExecute == true))
                 {
