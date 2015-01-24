@@ -36,17 +36,24 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 
         public List<IScenario> Scenarios { get; set; }
         public List<IEvent> Events { get; set; }
-        public List<PlayerStats> PlayerStats { get; set; }
-        public List<GameObject> Players { get; set; } 
+        public List<PlayerStatus> PlayerStats { get; set; }
 
         void Start()
         {
+            PlayerStats = new List<PlayerStatus>();
+            Events = new List<IEvent>();
+            Scenarios = new List<IScenario>();
 
-            //Players = FindObjectsOfType<PlayerStats>().ToList();
-            //Scenarios = fin
+            var players = FindObjectsOfType<PlayerStatus>();
+            foreach (var player in players)
+            {
+                PlayerStats.Add(player.GetComponent<PlayerStatus>());
+                Events.Add(player.GetComponent(typeof (IEvent)) as IEvent);
+                Scenarios.Add(player.GetComponent(typeof(IScenario)) as IScenario);
+            }
         }
 
-        public PlayerStats GetPlayerStatsByNumber(int playerNumber)
+        public PlayerStatus GetPlayerStatsByNumber(int playerNumber)
         {
             return PlayerStats.First(i => i.PlayerId == playerNumber);
         }

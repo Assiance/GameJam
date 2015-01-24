@@ -12,7 +12,7 @@ namespace Assets.GameJam.Scripts.Regular.Choices
         public int PopulationModifier = 0;
         public int MoraleModifier = 0;
 
-        public bool DoExecute { get; set; }
+        public virtual bool DoExecute { get; set; }
 
         public virtual bool Disabled
         {
@@ -28,7 +28,7 @@ namespace Assets.GameJam.Scripts.Regular.Choices
 
         public virtual void Execute()
         {
-            var playerstats = gameObject.GetComponent<PlayerStats>();
+            var playerstats = gameObject.GetComponent<PlayerStatus>();
             playerstats.Resources += ResourcesModifier;
             playerstats.Population += PopulationModifier;
             playerstats.Morale += MoraleModifier;

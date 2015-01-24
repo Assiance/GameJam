@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,19 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         public int TotalPhases;
         private int RoundNumber = 3;
         private int PhaseNumber = 3;
+        public float RoundTime = 15f;
+
+        void Start()
+        {
+            
+        }
+
+        IEnumerator StartTimer()
+        {
+            Debug.Log("Started Timer");
+            yield return new WaitForSeconds(RoundTime);
+            CycleRound();
+        }
 
         public void CycleRound()
         {

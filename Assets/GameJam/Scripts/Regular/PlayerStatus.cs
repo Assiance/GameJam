@@ -7,7 +7,7 @@ using Assets.GameJam.Scripts.Regular.General;
 
 namespace Assets.GameJam.Scripts.Regular
 {
-    public class PlayerStats : MyMonoBehaviour
+    public class PlayerStatus : MyMonoBehaviour
     {
         public int PlayerId { get; set; }
         public int Population{set;get;}
