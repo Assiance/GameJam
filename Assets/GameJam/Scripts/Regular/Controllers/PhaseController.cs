@@ -9,46 +9,52 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 {
     public class PhaseController : MyMonoBehaviour
     {
-        #region Singleton
-        private static PhaseController _instance;
-        public static PhaseController Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = GameObject.FindObjectOfType(typeof(PhaseController)) as PhaseController;
-                    if (_instance == null)
-                        _instance = new GameObject("PhaseController Temporary Instance", typeof(PhaseController)).GetComponent<PhaseController>();
-                }
-                return _instance;
-            }
-        }
-
-        void Awake()
-        {
-            if (_instance == null)
-            {
-                _instance = this;
-            }
-        }
-        #endregion
-
         public int TotalRounds;
         public int TotalPhases;
-        private int RoundNumber;
-        private int PhaseNumber;
+        private int RoundNumber = 3;
+        private int PhaseNumber = 3;
 
         public void CycleRound()
         {
-            //execute all choices
-            //plus 1 to 
-  
+            foreach (var player in StateController.Instance.PlayerStats)
+            {
+                IChoice[] choices = player.gameObject.GetComponents(typeof (IChoice)) as IChoice[];
+
+                foreach (IChoice choice in choices.Where(i => i.DoExecute == true))
+                {
+                    choice.Execute();
+                }
+            }
+
+            if (RoundNumber < TotalRounds)
+            {
+                RoundNumber++;
+                //StateController New Round
+            }
+            else
+            {
+                RoundNumber = 0;
+                CyclePhase();
+                //StateController NewPhas
+            }
         }
 
-        public void CycleScenario()
+        public void CyclePhase()
         {
-            
+            foreach (var scenario in StateController.Instance.Scenarios)
+            {
+                scenario.Execute();
+            }
+
+            if (PhaseNumber < TotalPhases)
+            {
+                PhaseNumber++;
+                //StateController InitiatePHase
+            }
+            else
+            {
+                //END GAME
+            }
         }
     }
 }

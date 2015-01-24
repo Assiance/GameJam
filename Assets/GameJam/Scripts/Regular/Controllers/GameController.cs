@@ -31,7 +31,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         }
         #endregion
 
-        private StateController _stateController { get; set; }
+        private PhaseController _phaseController { get; set; }
 
         public void Win()
         {

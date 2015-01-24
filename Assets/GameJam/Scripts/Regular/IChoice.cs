@@ -7,9 +7,9 @@ namespace Assets.GameJam.Scripts.Regular
 {
     public interface IChoice
     {
-
-        bool Disabled {get;set;}
+        bool DoExecute { get; set; }
+        bool Disabled { get; set; }
         void Execute();
-        string Name {get;}
+        string Name { get; }
     }
 }

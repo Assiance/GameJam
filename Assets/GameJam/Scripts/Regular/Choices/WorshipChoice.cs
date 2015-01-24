@@ -19,6 +19,7 @@ namespace Assets.GameJam.Scripts.Regular.Choices
             get { return "Gather"; }
         }
 
+        public bool DoExecute { get; set; }
         public bool Disabled { get; set; } 
     }
 }
