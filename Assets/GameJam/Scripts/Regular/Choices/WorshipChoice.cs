@@ -6,20 +6,20 @@ using System.Text;
 
 namespace Assets.GameJam.Scripts.Regular.Choices
 {
-    public class WorshipChoice : MyMonoBehaviour, IChoice
+    public class WorshipChoice : BaseChoice 
     {
 
-        public void Execute()
+        public override void Execute()
         {
-            // Increase resources! Hooray!
+            base.Execute();
         }
 
-        public string Name
+        public override string Name
         {
             get { return "Gather"; }
         }
 
         public bool DoExecute { get; set; }
-        public bool Disabled { get; set; } 
+        public override bool Disabled { get; set; } 
     }
 }

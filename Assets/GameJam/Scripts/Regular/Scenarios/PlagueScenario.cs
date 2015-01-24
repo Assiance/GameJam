@@ -6,30 +6,30 @@ using System.Text;
 
 namespace Assets.GameJam.Scripts.Regular.Scenarios
 {
-    public class PlagueScenario : MyMonoBehaviour, IScenario
+    public class PlagueScenario : BaseScenario
     {
-        public void Execute()
+        public override void Execute()
         {
-            throw new NotImplementedException();
+            base.Execute();
         }
 
-        public string Name
+        public override string Name
         {
             get { return "Plague!"; }
         }
 
 
-        public string Description
+        public override string Description
         {
             get { throw new NotImplementedException(); }
         }
 
-        public string Effect
+        public override string Effect
         {
             get { throw new NotImplementedException(); }
         }
 
-        public string Resolution
+        public override string Resolution
         {
             get { throw new NotImplementedException(); }
         }

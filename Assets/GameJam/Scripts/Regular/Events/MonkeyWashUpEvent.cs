@@ -1,18 +1,20 @@
-﻿using System;
+﻿using Assets.GameJam.Scripts.Regular.General;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace Assets.GameJam.Scripts.Regular.Events
 {
-    public class MonkeyWashUpEvent : IEvent
+    public class MonkeyWashUpEvent : BaseEvent
     {
-        public void Execute()
+        public override void Execute()
         {
-            // Do something
+            base.Execute();
+
         }
 
-        public string Name
+        public override string Name
         {
             get { return "Tornado"; }
         }
