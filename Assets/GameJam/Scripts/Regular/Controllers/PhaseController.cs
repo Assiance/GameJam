@@ -44,13 +44,12 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             }
 
             Debug.Log("Update Players");
-            StateController.Instance.UpdatePlayers();
+            UpdatePlayers();
 
             if (RoundNumber < TotalRounds)
             {
                 RoundNumber++;
-                
-                //StateController New Round
+                StartNewRound();
             }
             else
             {
