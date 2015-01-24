@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Assets.GameJam.Scripts.Regular.Scenarios
 {
-    public class PlagueScenario : MyMonoBehaviour, IScenario
+    public class WildPantherScenario : MyMonoBehaviour, IScenario
     {
         public void Execute()
         {
@@ -15,7 +15,7 @@ namespace Assets.GameJam.Scripts.Regular.Scenarios
 
         public string Name
         {
-            get { return "Plague!"; }
+            get { return "Wild Panthers attacked!"; }
         }
 
 

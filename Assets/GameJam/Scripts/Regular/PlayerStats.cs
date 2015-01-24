@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Assets.GameJam.Scripts.Regular.General;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace Assets.GameJam.Scripts.Regular
 {
-    public class PlayerStats
+    public class PlayerStats : MyMonoBehaviour
     {
         public int PlayerId { get; set; }
         public int Population{set;get;}

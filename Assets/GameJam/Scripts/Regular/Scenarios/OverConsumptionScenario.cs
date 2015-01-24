@@ -1,21 +1,23 @@
-﻿using Assets.GameJam.Scripts.Regular.General;
+﻿using Assets.GameJam.Scripts.Regular.Controllers;
+using Assets.GameJam.Scripts.Regular.General;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace Assets.GameJam.Scripts.Regular.Scenarios
 {
-    public class PlagueScenario : MyMonoBehaviour, IScenario
+    public class OverConsumptionScenario : MyMonoBehaviour, IScenario
     {
         public void Execute()
         {
-            throw new NotImplementedException();
+            PlayerStats playerstats = gameObject.GetComponent<PlayerStats>() as PlayerStats;
         }
 
         public string Name
         {
-            get { return "Plague!"; }
+            get { return "Villager Over Consumption!"; }
         }
 
 

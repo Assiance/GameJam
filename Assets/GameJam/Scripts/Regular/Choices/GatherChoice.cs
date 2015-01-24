@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Assets.GameJam.Scripts.Regular;
+using Assets.GameJam.Scripts.Regular.General;
 
 namespace Assets.GameJam.Scripts
 {
-    public class GatherChoice : IChoice
+    public class GatherChoice : MyMonoBehaviour, IChoice
     {
         public void Execute()
         {

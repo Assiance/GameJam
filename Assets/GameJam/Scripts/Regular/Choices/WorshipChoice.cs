@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Assets.GameJam.Scripts.Regular.General;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace Assets.GameJam.Scripts.Regular.Choices
 {
-    public class WorshipChoice: IChoice
+    public class WorshipChoice : MyMonoBehaviour, IChoice
     {
 
         public void Execute()
