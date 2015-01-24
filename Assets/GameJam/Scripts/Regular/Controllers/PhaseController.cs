@@ -37,11 +37,14 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             {
                 var choices = player.gameObject.GetComponents<BaseChoice>();
 
-                foreach (IChoice choice in choices.Where(i => i.DoExecute == true))
+                foreach (IChoice choice in choices.Where(i => i.DoExecute == false))
                 {
                     choice.Execute();
                 }
             }
+
+            Debug.Log("Update Players");
+            StateController.Instance.UpdatePlayers();
 
             if (RoundNumber < TotalRounds)
             {

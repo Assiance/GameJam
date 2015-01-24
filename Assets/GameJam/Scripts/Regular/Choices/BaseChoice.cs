@@ -8,9 +8,9 @@ namespace Assets.GameJam.Scripts.Regular.Choices
 {
     public class BaseChoice : MyMonoBehaviour, IChoice
     {
-        public int ResourcesModifier = 0;
-        public int PopulationModifier = 0;
-        public int MoraleModifier = 0;
+        public int ResourcesModifier = 6;
+        public int PopulationModifier = 6;
+        public int MoraleModifier = 6;
 
         public virtual bool DoExecute { get; set; }
 

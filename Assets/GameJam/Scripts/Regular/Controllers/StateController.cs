@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Assets.GameJam.Scripts.Regular.Choices;
+using Assets.GameJam.Scripts.Regular.Events;
 using Assets.GameJam.Scripts.Regular.General;
+using Assets.GameJam.Scripts.Regular.Scenarios;
 using UnityEngine;
 
 namespace Assets.GameJam.Scripts.Regular.Controllers
@@ -34,28 +37,39 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         }
         #endregion
 
-        public List<IScenario> Scenarios { get; set; }
-        public List<IEvent> Events { get; set; }
+        public List<BaseScenario> Scenarios { get; set; }
+        public List<BaseEvent> Events { get; set; }
         public List<PlayerStatus> PlayerStats { get; set; }
+        public List<BaseChoice> Choices { get; set; }
 
         void Start()
         {
             PlayerStats = new List<PlayerStatus>();
-            Events = new List<IEvent>();
-            Scenarios = new List<IScenario>();
+            Events = new List<BaseEvent>();
+            Scenarios = new List<BaseScenario>();
+            Choices = new List<BaseChoice>();
 
             var players = FindObjectsOfType<PlayerStatus>();
             foreach (var player in players)
             {
                 PlayerStats.Add(player.GetComponent<PlayerStatus>());
-                Events.Add(player.GetComponent(typeof (IEvent)) as IEvent);
-                Scenarios.Add(player.GetComponent(typeof(IScenario)) as IScenario);
+                Events.Add(player.GetComponent<BaseEvent>());
+                Scenarios.Add(player.GetComponent<BaseScenario>());
+                Choices.Add(player.GetComponent<BaseChoice>());
             }
         }
 
         public PlayerStatus GetPlayerStatsByNumber(int playerNumber)
         {
             return PlayerStats.First(i => i.PlayerId == playerNumber);
+        }
+
+        public void UpdatePlayers()
+        {
+            foreach (var player in PlayerStats)
+            {
+                player.UpdateText();
+            }
         }
 
        
