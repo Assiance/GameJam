@@ -8,30 +8,35 @@ using UnityEngine;
 
 namespace Assets.GameJam.Scripts.Regular.Scenarios
 {
-    public class OverConsumptionScenario : MyMonoBehaviour, IScenario
+    public class OverConsumptionScenario : BaseScenario
     {
-        public void Execute()
+
+        private void Start()
         {
-            PlayerStats playerstats = gameObject.GetComponent<PlayerStats>() as PlayerStats;
+            
+        }
+        public override void Execute()
+        {
+            base.Execute();
         }
 
-        public string Name
+        public override string Name
         {
             get { return "Villager Over Consumption!"; }
         }
 
 
-        public string Description
+        public override string Description
         {
             get { throw new NotImplementedException(); }
         }
 
-        public string Effect
+        public override string Effect
         {
             get { throw new NotImplementedException(); }
         }
 
-        public string Resolution
+        public override string Resolution
         {
             get { throw new NotImplementedException(); }
         }

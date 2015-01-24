@@ -5,20 +5,21 @@ using System.Text;
 using Assets.GameJam.Scripts.Regular;
 using Assets.GameJam.Scripts.Regular.General;
 
-namespace Assets.GameJam.Scripts
+
+namespace Assets.GameJam.Scripts.Regular.Choices
 {
-    public class GatherChoice : MyMonoBehaviour, IChoice
+    public class GatherChoice : BaseChoice 
     {
-        public void Execute()
+        public override void Execute()
         {
-            // Increase resources! Hooray!
+            base.Execute();
         }
 
-        public string Name
+        public override string Name
         {
             get { return "Gather"; }
         }
 
-        public bool Disabled { get; set; }        
+        public override bool Disabled { get; set; }        
     }
 }
