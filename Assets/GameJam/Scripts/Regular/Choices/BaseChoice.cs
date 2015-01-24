@@ -28,7 +28,7 @@ namespace Assets.GameJam.Scripts.Regular.Choices
 
         public virtual void Execute()
         {
-            var playerstats = gameObject.GetComponent<PlayerStats>();
+            var playerstats = gameObject.GetComponent<PlayerStatus>();
             playerstats.Resources += playerstats.Skill == "Resources" ? (int)(ResourcesModifier * playerstats.SkillMultiplier) : ResourcesModifier;
             playerstats.Population += playerstats.Skill == "Population" ? (int)(PopulationModifier * playerstats.SkillMultiplier) : PopulationModifier;
             playerstats.Morale += playerstats.Skill == "Morale" ? (int)(MoraleModifier * playerstats.SkillMultiplier) : MoraleModifier;

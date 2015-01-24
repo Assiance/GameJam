@@ -14,7 +14,7 @@ namespace Assets.GameJam.Scripts.Regular.Events
 
           public virtual void Execute()
           {
-              var playerstats = gameObject.GetComponent<PlayerStats>();
+              var playerstats = gameObject.GetComponent<PlayerStatus>();
               playerstats.Resources += ResourcesModifier;
               playerstats.Population += PopulationModifier;
               playerstats.Morale += MoraleModifier;
