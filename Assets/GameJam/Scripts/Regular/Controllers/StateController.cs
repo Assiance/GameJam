@@ -37,6 +37,14 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         public List<IScenario> Scenarios { get; set; }
         public List<IEvent> Events { get; set; }
         public List<PlayerStats> PlayerStats { get; set; }
+        public List<GameObject> Players { get; set; } 
+
+        void Start()
+        {
+
+            //Players = FindObjectsOfType<PlayerStats>().ToList();
+            //Scenarios = fin
+        }
 
         public PlayerStats GetPlayerStatsByNumber(int playerNumber)
         {
