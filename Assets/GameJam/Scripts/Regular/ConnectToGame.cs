@@ -9,8 +9,21 @@ namespace Assets.GameJam.Scripts.Regular
 {
     public class ConnectToGame : MyMonoBehaviour
     {
-        private string ip = "172.16.27.25";
-        private int port = 25005;
+        private string ip = "169.254.110.43";
+        private int port = 50005;
+        private HostData[] hostList;
+
+        void Awake()
+        {
+            hostList = new HostData[1];
+            MasterServer.RequestHostList("UniqueGameName");
+        }
+
+        void OnMasterServerEvent(MasterServerEvent msEvent)
+        {
+            if (msEvent == MasterServerEvent.HostListReceived)
+                hostList = MasterServer.PollHostList();
+        }
 
         private void OnGUI()
         {
@@ -28,7 +41,7 @@ namespace Assets.GameJam.Scripts.Regular
             // connect to the IP and port
             if (GUILayout.Button("Connect", GUILayout.Width(100f)))
             {
-                Network.Connect(ip, port);
+                Network.Connect(hostList[0]);
             }
             // host a server on the given port, only allow 1 incomingconnection(one other player)
             if (GUILayout.Button("Host", GUILayout.Width(100f)))
