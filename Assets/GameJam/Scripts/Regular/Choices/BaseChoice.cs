@@ -38,5 +38,10 @@ namespace Assets.GameJam.Scripts.Regular.Choices
         {
             get { throw new NotImplementedException(); }
         }
+
+        public void PrepareChoice()
+        {
+            DoExecute = true;
+        }
     }
 }
