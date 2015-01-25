@@ -18,19 +18,10 @@ namespace Assets.GameJam.Scripts.Regular
         void Start()
         {
             characterSprite = gameObject.GetComponent<SpriteRenderer>();
-
-            AcceptsInput = networkView.isMine;
         }
 
         void Update()
         {
-            if (!AcceptsInput)
-            {
-                IsSelected = readNetworkIsSelected;
-                // don't use player input
-                return;
-            }
-
             if (IsSelected)
             {
                 characterSprite.color = Color.grey;
@@ -70,9 +61,7 @@ namespace Assets.GameJam.Scripts.Regular
             // reading information, read paddle position
             else
             {
-                bool sel = false;
-                stream.Serialize(ref sel);
-                readNetworkIsSelected = sel;
+                stream.Serialize(ref IsSelected);
             }
         }
     }
