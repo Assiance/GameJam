@@ -14,6 +14,9 @@ namespace Assets.GameJam.Scripts.Regular
         public Text PopulationText;
         public Text ResourcesText;
         public Text MoraleText;
+        public Text CharacterName;
+        public Text CharacterDescription;
+        public Image CharacterPortrait;
         public Button myButton;
 
         public int PlayerId { get; set; }
@@ -29,6 +32,9 @@ namespace Assets.GameJam.Scripts.Regular
             PopulationText.text = Population.ToString();
             ResourcesText.text = Resources.ToString();
             MoraleText.text = Morale.ToString();
+            CharacterName.text = "Average Monkey";
+            CharacterDescription.text = "Average Monkey enjoys long walks on the beach, eating bananas, and dancing around the campfire.";
+            
         }
 
         public void UpdateText()
