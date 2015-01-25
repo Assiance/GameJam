@@ -196,6 +196,7 @@ GameObject:
   - 212: {fileID: 900978367}
   - 114: {fileID: 900978368}
   - 61: {fileID: 900978369}
+  - 148: {fileID: 900978370}
   m_Layer: 0
   m_Name: Hunter
   m_TagString: Untagged
@@ -261,6 +262,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
+--- !u!148 &900978370
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 900978365}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 900978368}
+  m_ViewID:
+    m_ID: 3
+    m_Type: 1
 --- !u!1 &1309371699
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +285,7 @@ GameObject:
   - 212: {fileID: 1309371701}
   - 114: {fileID: 1309371702}
   - 61: {fileID: 1309371703}
+  - 148: {fileID: 1309371704}
   m_Layer: 0
   m_Name: Priest
   m_TagString: Untagged
@@ -337,6 +351,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
+--- !u!148 &1309371704
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309371699}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1309371702}
+  m_ViewID:
+    m_ID: 2
+    m_Type: 1
 --- !u!1 &1315917788
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +374,7 @@ GameObject:
   - 212: {fileID: 1315917790}
   - 114: {fileID: 1315917791}
   - 61: {fileID: 1315917792}
+  - 148: {fileID: 1315917793}
   m_Layer: 0
   m_Name: DoomsDayPrepper
   m_TagString: Untagged
@@ -413,6 +440,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
+--- !u!148 &1315917793
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1315917788}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1315917791}
+  m_ViewID:
+    m_ID: 6
+    m_Type: 1
 --- !u!1 &1406958690
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,6 +463,7 @@ GameObject:
   - 212: {fileID: 1406958692}
   - 114: {fileID: 1406958693}
   - 61: {fileID: 1406958694}
+  - 148: {fileID: 1406958695}
   m_Layer: 0
   m_Name: Spy
   m_TagString: Untagged
@@ -489,6 +529,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
+--- !u!148 &1406958695
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1406958690}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1406958693}
+  m_ViewID:
+    m_ID: 1
+    m_Type: 1
 --- !u!1 &1811761849
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +585,7 @@ GameObject:
   - 212: {fileID: 1909937532}
   - 114: {fileID: 1909937534}
   - 61: {fileID: 1909937535}
+  - 148: {fileID: 1909937536}
   m_Layer: 0
   m_Name: Merchant
   m_TagString: Untagged
@@ -598,6 +651,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
+--- !u!148 &1909937536
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909937531}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1909937534}
+  m_ViewID:
+    m_ID: 5
+    m_Type: 1
 --- !u!1 &2114200061
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +674,7 @@ GameObject:
   - 212: {fileID: 2114200063}
   - 114: {fileID: 2114200064}
   - 61: {fileID: 2114200065}
+  - 148: {fileID: 2114200066}
   m_Layer: 0
   m_Name: Raider
   m_TagString: Untagged
@@ -674,3 +740,15 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .159999996, y: .159999996}
   m_Center: {x: 0, y: 0}
+--- !u!148 &2114200066
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114200061}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 2114200064}
+  m_ViewID:
+    m_ID: 4
+    m_Type: 1
