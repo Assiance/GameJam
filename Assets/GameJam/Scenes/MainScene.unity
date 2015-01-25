@@ -1795,6 +1795,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b28f697ce61c4704284ff51e5356c61f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PopulationText: {fileID: 2103205978}
+  ResourcesText: {fileID: 265578339}
+  MoraleText: {fileID: 1332398833}
+  CharacterName: {fileID: 202537426}
+  CharacterDescription: {fileID: 438737307}
+  CharacterPortrait: {fileID: 0}
 --- !u!114 &864973291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2329,12 +2335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162548fcf9a574a4ea6674193f0f9f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PopulationText: {fileID: 2103205978}
-  ResourcesText: {fileID: 265578339}
-  MoraleText: {fileID: 1332398833}
-  CharacterName: {fileID: 202537426}
-  CharacterDescription: {fileID: 438737307}
-  CharacterPortrait: {fileID: 242496564}
   PlayerId: 4
   IsAlive: 1
   Population: 100
@@ -2523,12 +2523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162548fcf9a574a4ea6674193f0f9f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PopulationText: {fileID: 2103205978}
-  ResourcesText: {fileID: 265578339}
-  MoraleText: {fileID: 1332398833}
-  CharacterName: {fileID: 202537426}
-  CharacterDescription: {fileID: 438737307}
-  CharacterPortrait: {fileID: 242496564}
   PlayerId: 2
   IsAlive: 1
   Population: 100
@@ -4044,12 +4038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162548fcf9a574a4ea6674193f0f9f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PopulationText: {fileID: 2103205978}
-  ResourcesText: {fileID: 265578339}
-  MoraleText: {fileID: 1332398833}
-  CharacterName: {fileID: 202537426}
-  CharacterDescription: {fileID: 438737307}
-  CharacterPortrait: {fileID: 242496564}
   PlayerId: 1
   IsAlive: 1
   Population: 100
@@ -4333,12 +4321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162548fcf9a574a4ea6674193f0f9f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PopulationText: {fileID: 2103205978}
-  ResourcesText: {fileID: 265578339}
-  MoraleText: {fileID: 1332398833}
-  CharacterName: {fileID: 202537426}
-  CharacterDescription: {fileID: 438737307}
-  CharacterPortrait: {fileID: 242496564}
   PlayerId: 3
   IsAlive: 1
   Population: 100
