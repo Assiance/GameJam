@@ -48,7 +48,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         public Text ResourcesText;
         public Text MoraleText;
         public Text CharacterName;
-        public Text CharacterDescription;
+        //public Text CharacterDescription;
         public Image CharacterPortrait;
 
         void Start()
@@ -84,24 +84,24 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         {
             var player = PlayerStats.First(i => i.PlayerId == playerNumber);
 
-            var monkeyDescription = GameController.Instance.MonkeyDescriptions[player.PlayerId - 1];
+            //var monkeyDescription = GameController.Instance.MonkeyDescriptions[player.PlayerId - 1];
             PopulationText.text = player.Population.ToString();
             ResourcesText.text = player.Resources.ToString();
             MoraleText.text = player.Morale.ToString();
-            CharacterName.text = monkeyDescription.Name;
-            CharacterDescription.text = monkeyDescription.Description;
+            //CharacterName.text = monkeyDescription.Name;
+            //CharacterDescription.text = monkeyDescription.Description;
 
             return player;
         }
 
         public void PlayerSwitch(PlayerStatus player)
         {
-            var monkeyDescription = GameController.Instance.MonkeyDescriptions[player.PlayerId - 1];
+            //var monkeyDescription = GameController.Instance.MonkeyDescriptions[player.PlayerId - 1];
             PopulationText.text = player.Population.ToString();
             ResourcesText.text = player.Resources.ToString();
             MoraleText.text = player.Morale.ToString();
-            CharacterName.text = monkeyDescription.Name;
-            CharacterDescription.text = monkeyDescription.Description;
+            //CharacterName.text = monkeyDescription.Name;
+            //CharacterDescription.text = monkeyDescription.Description;
         }
 
         IEnumerator DeathCheck()
