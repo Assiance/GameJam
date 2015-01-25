@@ -194,6 +194,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 900978366}
   - 212: {fileID: 900978367}
+  - 114: {fileID: 900978368}
+  - 61: {fileID: 900978369}
   m_Layer: 0
   m_Name: Hunter
   m_TagString: Untagged
@@ -235,6 +237,30 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &900978368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 900978365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelected: 0
+  AcceptsInput: 1
+--- !u!61 &900978369
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 900978365}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .159999996, y: .159999996}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &1309371699
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +270,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1309371700}
   - 212: {fileID: 1309371701}
+  - 114: {fileID: 1309371702}
+  - 61: {fileID: 1309371703}
   m_Layer: 0
   m_Name: Priest
   m_TagString: Untagged
@@ -285,6 +313,30 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1309371702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309371699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelected: 0
+  AcceptsInput: 1
+--- !u!61 &1309371703
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309371699}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .159999996, y: .159999996}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &1315917788
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +346,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1315917789}
   - 212: {fileID: 1315917790}
+  - 114: {fileID: 1315917791}
+  - 61: {fileID: 1315917792}
   m_Layer: 0
   m_Name: DoomsDayPrepper
   m_TagString: Untagged
@@ -335,6 +389,30 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1315917791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1315917788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelected: 0
+  AcceptsInput: 1
+--- !u!61 &1315917792
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1315917788}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .159999996, y: .159999996}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &1406958690
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +422,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1406958691}
   - 212: {fileID: 1406958692}
+  - 114: {fileID: 1406958693}
+  - 61: {fileID: 1406958694}
   m_Layer: 0
   m_Name: Spy
   m_TagString: Untagged
@@ -385,6 +465,30 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1406958693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1406958690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelected: 0
+  AcceptsInput: 1
+--- !u!61 &1406958694
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1406958690}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .159999996, y: .159999996}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &1811761849
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +531,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1909937533}
   - 212: {fileID: 1909937532}
+  - 114: {fileID: 1909937534}
+  - 61: {fileID: 1909937535}
   m_Layer: 0
   m_Name: Merchant
   m_TagString: Untagged
@@ -468,6 +574,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1811761850}
   m_RootOrder: 4
+--- !u!114 &1909937534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909937531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelected: 0
+  AcceptsInput: 1
+--- !u!61 &1909937535
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909937531}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .159999996, y: .159999996}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &2114200061
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +607,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 2114200062}
   - 212: {fileID: 2114200063}
+  - 114: {fileID: 2114200064}
+  - 61: {fileID: 2114200065}
   m_Layer: 0
   m_Name: Raider
   m_TagString: Untagged
@@ -518,3 +650,27 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &2114200064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114200061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSelected: 0
+  AcceptsInput: 1
+--- !u!61 &2114200065
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114200061}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .159999996, y: .159999996}
+  m_Center: {x: 0, y: 0}
