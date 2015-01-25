@@ -1015,7 +1015,7 @@ MonoBehaviour:
   PopulationText: {fileID: 2103205978}
   ResourcesText: {fileID: 265578339}
   MoraleText: {fileID: 1332398833}
-  CharacterName: {fileID: 0}
+  CharacterName: {fileID: 1723544496}
   CharacterPortrait: {fileID: 0}
 --- !u!114 &864973291
 MonoBehaviour:
