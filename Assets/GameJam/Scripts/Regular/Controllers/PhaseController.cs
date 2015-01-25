@@ -277,25 +277,30 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 
         public void SelectGather()
         {
+            BaseSoundController.Instance.PlaySoundByIndex(3, Vector2.zero);
             ActivePlayer.GetComponent<GatherChoice>().DoExecute = true;
         }
 
         public void SelectRaid()
         {
+            BaseSoundController.Instance.PlaySoundByIndex(3, Vector2.zero);
             ActivePlayer.GetComponent<RaidChoice>().DoExecute = true;
         }
         public void SelectScout()
         {
+            BaseSoundController.Instance.PlaySoundByIndex(3, Vector2.zero);
             ActivePlayer.GetComponent<ScoutChoice>().DoExecute = true;
         }
 
         public void SelectTrade()
         {
+            BaseSoundController.Instance.PlaySoundByIndex(3, Vector2.zero);
             ActivePlayer.GetComponent<TradeChoice>().DoExecute = true;
         }
 
         public void SelectWorship()
         {
+            BaseSoundController.Instance.PlaySoundByIndex(3, Vector2.zero);
             ActivePlayer.GetComponent<WorshipChoice>().DoExecute = true;
         }
     }
