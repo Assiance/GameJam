@@ -11,6 +11,7 @@ namespace Assets.GameJam.Scripts.Regular
     {
         public void StartTheGame()
         {
+
             BaseSoundController.Instance.PlaySoundByIndex(0, Vector2.zero);
             Application.LoadLevel("StoryScene");
         }
