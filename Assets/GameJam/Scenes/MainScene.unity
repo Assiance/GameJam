@@ -533,6 +533,7 @@ GameObject:
   - 124: {fileID: 537411632}
   - 81: {fileID: 537411631}
   - 114: {fileID: 537411636}
+  - 114: {fileID: 537411637}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -620,12 +621,28 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7a25d6199da904044b09e509ff000748, type: 3}
   - {fileID: 8300000, guid: f3ac4dc036329d04f8be356c0316a91c, type: 3}
   - {fileID: 8300000, guid: 88fb91a244dc48d4fb64b545fc6e4d4e, type: 3}
-  - {fileID: 8300000, guid: 35b5a3e61bcc2ca42837c7cde5ef18ee, type: 3}
+  - {fileID: 8300000, guid: 52f95d6d81ba7a34b9b6cf2591f8c5db, type: 3}
   - {fileID: 8300000, guid: f9848bc2c39e6ca448ab8490e4ce520b, type: 3}
   - {fileID: 8300000, guid: bd36259c414663140b8a61960f3d7582, type: 3}
   - {fileID: 8300000, guid: c8916fd18e3b42741970e744095e952f, type: 3}
   Volume: 500
   GamePrefsName: DefaultGame
+--- !u!114 &537411637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 537411630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32f08f79a50ef84ab6169d9beb58b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GamePrefsName: DefaultGame
+  Music: {fileID: 8300000, guid: 3e0cd7bacd740c24fb31e2ac02b19c03, type: 3}
+  LoopMusic: 1
+  FadeTime: 15
+  ShouldFadeInAtStart: 1
 --- !u!1 &619913922
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,56 +774,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 651465430}
---- !u!1 &766231679
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 766231681}
-  - 212: {fileID: 766231680}
-  m_Layer: 0
-  m_Name: button-scout
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &766231680
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 766231679}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8a517fff74c34464bad64b0f3a19dab2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &766231681
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 766231679}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 474.236786, y: -56.206604, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
 --- !u!1 &773183716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,7 +1046,6 @@ GameObject:
   - 222: {fileID: 889338793}
   - 114: {fileID: 889338792}
   - 114: {fileID: 889338791}
-  - 114: {fileID: 889338794}
   m_Layer: 5
   m_Name: ScoutButton
   m_TagString: Untagged
@@ -1143,8 +1109,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889338794}
-        m_MethodName: PrepareChoice
+      - m_Target: {fileID: 864973291}
+        m_MethodName: SelectScout
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1184,20 +1150,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 889338789}
---- !u!114 &889338794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 889338789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7c949309abca2243b924c0ab56821b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResourcesModifier: 0
-  PopulationModifier: 0
-  MoraleModifier: 0
 --- !u!1 &917845321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,7 +1161,6 @@ GameObject:
   - 222: {fileID: 917845325}
   - 114: {fileID: 917845324}
   - 114: {fileID: 917845323}
-  - 114: {fileID: 917845326}
   m_Layer: 5
   m_Name: WorshipButton
   m_TagString: Untagged
@@ -1273,8 +1224,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 917845326}
-        m_MethodName: PrepareChoice
+      - m_Target: {fileID: 864973291}
+        m_MethodName: SelectWorship
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1314,20 +1265,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 917845321}
---- !u!114 &917845326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 917845321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb13027b377cad34d860893c62b03a6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResourcesModifier: 0
-  PopulationModifier: 0
-  MoraleModifier: 2
 --- !u!1 &968724014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,7 +1775,6 @@ GameObject:
   - 222: {fileID: 1182370122}
   - 114: {fileID: 1182370121}
   - 114: {fileID: 1182370120}
-  - 114: {fileID: 1182370123}
   m_Layer: 5
   m_Name: RaidButton
   m_TagString: Untagged
@@ -1902,8 +1838,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1182370123}
-        m_MethodName: PrepareChoice
+      - m_Target: {fileID: 864973291}
+        m_MethodName: SelectRaid
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1943,20 +1879,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1182370118}
---- !u!114 &1182370123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1182370118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 055d0317535466a4298ae3874127a3dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResourcesModifier: 0
-  PopulationModifier: 0
-  MoraleModifier: 0
 --- !u!1 &1257060751
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,7 +3027,6 @@ GameObject:
   - 222: {fileID: 1993931717}
   - 114: {fileID: 1993931716}
   - 114: {fileID: 1993931715}
-  - 114: {fileID: 1993931718}
   m_Layer: 5
   m_Name: ForageButton
   m_TagString: Untagged
@@ -3169,8 +3090,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1993931718}
-        m_MethodName: PrepareChoice
+      - m_Target: {fileID: 864973291}
+        m_MethodName: SelectGather
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3210,20 +3131,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1993931713}
---- !u!114 &1993931718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1993931713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9caa2dfe45f7ec14b9101cc130774e72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResourcesModifier: 2
-  PopulationModifier: 0
-  MoraleModifier: 0
 --- !u!1 &2103205976
 GameObject:
   m_ObjectHideFlags: 0
