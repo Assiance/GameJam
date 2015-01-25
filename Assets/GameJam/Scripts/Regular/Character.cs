@@ -5,12 +5,14 @@ using System.Text;
 using Assets.GameJam.Scripts.Regular.Controllers;
 using Assets.GameJam.Scripts.Regular.General;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.GameJam.Scripts.Regular
 {
     public class Character : MyMonoBehaviour
     {
         private static int playerCount = 0;
+        public Color SelectColor;
 
         void Start()
         {
@@ -26,6 +28,7 @@ namespace Assets.GameJam.Scripts.Regular
 
         public void Pirate()
         {
+            gameObject.GetComponentsInParent<Image>()[1].color = new Color(0.82f, 0.49f, 0f);
             var MonkeyDescriptionComponent = new MonkeyDescription();
             GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
@@ -34,6 +37,7 @@ namespace Assets.GameJam.Scripts.Regular
 
         public void Raider()
         {
+            gameObject.GetComponentsInParent<Image>()[1].color = new Color(0.82f, 0.49f, 0f);
             var MonkeyDescriptionComponent = new MonkeyDescription();
             GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
@@ -42,6 +46,7 @@ namespace Assets.GameJam.Scripts.Regular
 
         public void Hunter()
         {
+            gameObject.GetComponentsInParent<Image>()[1].color = new Color(0.82f, 0.49f, 0f);
             var MonkeyDescriptionComponent = new MonkeyDescription();
             GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
@@ -50,6 +55,7 @@ namespace Assets.GameJam.Scripts.Regular
 
         public void Prist()
         {
+            gameObject.GetComponentsInParent<Image>()[1].color = new Color(0.82f, 0.49f, 0f);
             var MonkeyDescriptionComponent = new MonkeyDescription();
             GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
@@ -58,6 +64,7 @@ namespace Assets.GameJam.Scripts.Regular
 
         public void Spy()
         {
+            gameObject.GetComponentsInParent<Image>()[1].color = new Color(0.82f, 0.49f, 0f);
             var MonkeyDescriptionComponent = new MonkeyDescription();
             GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
@@ -66,6 +73,7 @@ namespace Assets.GameJam.Scripts.Regular
 
         public void Merchant()
         {
+            gameObject.GetComponentsInParent<Image>()[1].color = new Color(0.82f, 0.49f, 0f);
             var MonkeyDescriptionComponent = new MonkeyDescription();
             GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
