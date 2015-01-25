@@ -63,6 +63,12 @@ namespace Assets.GameJam.Scripts.Regular
             playerCount++;
             Debug.Log("Selected Character " + playerCount);
         }
+
+
+        public void chooseChar()
+        {
+            int i = 0;
+        }
   
 
     
