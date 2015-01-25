@@ -48,7 +48,6 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         public Text ResourcesText;
         public Text MoraleText;
         public Text CharacterName;
-        public Text CharacterDescription;
         public Image CharacterPortrait;
 
         void Start()
@@ -89,7 +88,6 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             ResourcesText.text = player.Resources.ToString();
             MoraleText.text = player.Morale.ToString();
             CharacterName.text = monkeyDescription.Name;
-            CharacterDescription.text = monkeyDescription.Description;
 
             return player;
         }
@@ -101,7 +99,6 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             ResourcesText.text = player.Resources.ToString();
             MoraleText.text = player.Morale.ToString();
             CharacterName.text = monkeyDescription.Name;
-            CharacterDescription.text = monkeyDescription.Description;
         }
 
         IEnumerator DeathCheck()

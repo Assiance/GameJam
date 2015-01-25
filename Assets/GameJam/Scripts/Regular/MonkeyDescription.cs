@@ -10,6 +10,5 @@ namespace Assets.GameJam.Scripts.Regular
     public class MonkeyDescription
     {
         public string Name = "Original Monkey";
-        public string Description = "Monkey";
     }
 }
