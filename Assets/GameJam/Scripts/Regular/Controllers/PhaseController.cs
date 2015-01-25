@@ -123,7 +123,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             }
             else
             {
-                //END GAME
+                GameController.Instance.Win();
             }
         }
 

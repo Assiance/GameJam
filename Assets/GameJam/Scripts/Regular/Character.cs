@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Assets.GameJam.Scripts.Regular.Controllers;
 using Assets.GameJam.Scripts.Regular.General;
 using UnityEngine;
 
@@ -9,48 +10,58 @@ namespace Assets.GameJam.Scripts.Regular
 {
     public class Character : MyMonoBehaviour
     {
-   
+        public MonkeyDescription MonkeyDescription;
 
-        void Start()
-        {
-           
-        }
+        private static int playerCount = 1;
 
         void Update()
         {
-     
+            if (playerCount == 4)
+            {
+                Application.LoadLevel("GameScene");
+            }
         }
-
-       
 
         public void Pirate()
         {
-            int i = 0;
+            GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
 
         public void Raider()
         {
-            int i = 0;
+            int i = 0; GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
 
         public void Hunter()
         {
-            int i = 0;
+            GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
 
         public void Prist()
         {
-            int i = 0;
+            GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
 
         public void Spy()
         {
-            int i = 0;
+            GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
 
         public void Merchant()
         {
-            int i = 0;
+            GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
 
 
