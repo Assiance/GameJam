@@ -133,7 +133,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Smoke Monster Attacks in the Night
 --- !u!222 &191262641
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: d61f6874a2a45234db5a255536a7a544, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ea9a8e3cd426974cbe2e75198d0e9fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -452,7 +452,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Someone Farted
 --- !u!222 &458916296
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalRounds: 5
   TotalPhases: 5
-  RoundTime: 2
+  RoundTime: 10
   ActivePlayer: {fileID: 0}
   timerSeconds: {fileID: 651465432}
   activePlayerName: {fileID: 1723544496}
@@ -1324,7 +1324,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Polar Bear Shows Up and Eats Some Food
 --- !u!222 &968724017
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1376,8 +1376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResourcesModifier: 0
-  PopulationModifier: 2
-  MoraleModifier: 4
+  PopulationModifier: 0
+  MoraleModifier: 2
 --- !u!114 &985584655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,9 +1389,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b8480ebe48bba438437750247adc8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 4
-  PopulationModifier: 0
-  MoraleModifier: 0
+  ResourcesModifier: 1
+  PopulationModifier: 1
+  MoraleModifier: 1
 --- !u!114 &985584656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1403,9 +1403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c949309abca2243b924c0ab56821b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 2
+  ResourcesModifier: 0
   PopulationModifier: 0
-  MoraleModifier: 2
+  MoraleModifier: 0
 --- !u!114 &985584657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,9 +1417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055d0317535466a4298ae3874127a3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 4
-  PopulationModifier: -2
-  MoraleModifier: 2
+  ResourcesModifier: 1
+  PopulationModifier: 1
+  MoraleModifier: 1
 --- !u!114 &985584658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1431,9 +1431,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9caa2dfe45f7ec14b9101cc130774e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
+  ResourcesModifier: 3
   PopulationModifier: 0
-  MoraleModifier: -2
+  MoraleModifier: 0
 --- !u!114 &985584659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1558,9 +1558,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13027b377cad34d860893c62b03a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 0
+  PopulationModifier: 0
+  MoraleModifier: 3
 --- !u!114 &1087210535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1572,9 +1572,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b8480ebe48bba438437750247adc8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 1
+  PopulationModifier: 1
+  MoraleModifier: 1
 --- !u!114 &1087210536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1586,9 +1586,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c949309abca2243b924c0ab56821b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 0
+  PopulationModifier: 0
+  MoraleModifier: 0
 --- !u!114 &1087210537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1600,9 +1600,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055d0317535466a4298ae3874127a3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 1
+  PopulationModifier: 1
+  MoraleModifier: 1
 --- !u!114 &1087210538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1614,9 +1614,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9caa2dfe45f7ec14b9101cc130774e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 3
+  PopulationModifier: 0
+  MoraleModifier: 0
 --- !u!114 &1087210539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1976,8 +1976,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .633333385}
-  m_AnchoredPosition: {x: -6.19999981, y: 1.29999995}
-  m_SizeDelta: {x: 12.3999996, y: 9.39999962}
+  m_AnchoredPosition: {x: -7.5, y: 2.0999999}
+  m_SizeDelta: {x: 15, y: 10.8999996}
   m_Pivot: {x: .5, y: .5}
 --- !u!222 &1321446095
 CanvasRenderer:
@@ -2010,7 +2010,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: -5
+  m_Text: -10
 --- !u!1 &1332398831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2540,7 +2540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: d61f6874a2a45234db5a255536a7a544, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc270fe874428d644959d4c7aec83747, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2648,9 +2648,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13027b377cad34d860893c62b03a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 0
+  PopulationModifier: 0
+  MoraleModifier: 3
 --- !u!114 &1768975668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2662,9 +2662,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b8480ebe48bba438437750247adc8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 1
+  PopulationModifier: 1
+  MoraleModifier: 1
 --- !u!114 &1768975669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2676,9 +2676,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c949309abca2243b924c0ab56821b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 0
+  PopulationModifier: 0
+  MoraleModifier: 0
 --- !u!114 &1768975670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2690,9 +2690,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055d0317535466a4298ae3874127a3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 1
+  PopulationModifier: 1
+  MoraleModifier: 1
 --- !u!114 &1768975671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2704,9 +2704,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9caa2dfe45f7ec14b9101cc130774e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 3
+  PopulationModifier: 0
+  MoraleModifier: 0
 --- !u!114 &1768975672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2926,9 +2926,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb13027b377cad34d860893c62b03a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 0
+  PopulationModifier: 0
+  MoraleModifier: 3
 --- !u!114 &1955004415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2940,9 +2940,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b8480ebe48bba438437750247adc8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 1
+  PopulationModifier: 1
+  MoraleModifier: 1
 --- !u!114 &1955004416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2954,9 +2954,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c949309abca2243b924c0ab56821b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 0
+  PopulationModifier: 0
+  MoraleModifier: 0
 --- !u!114 &1955004417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2968,9 +2968,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055d0317535466a4298ae3874127a3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 1
+  PopulationModifier: 1
+  MoraleModifier: 1
 --- !u!114 &1955004418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2982,9 +2982,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9caa2dfe45f7ec14b9101cc130774e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ResourcesModifier: 6
-  PopulationModifier: 6
-  MoraleModifier: 6
+  ResourcesModifier: 3
+  PopulationModifier: 0
+  MoraleModifier: 0
 --- !u!114 &1955004419
 MonoBehaviour:
   m_ObjectHideFlags: 0
