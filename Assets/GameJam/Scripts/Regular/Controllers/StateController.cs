@@ -84,7 +84,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         {
             var player = PlayerStats.First(i => i.PlayerId == playerNumber);
 
-            var monkeyDescription = GameController.Instance.MonkeyDescriptions[player.PlayerId];
+            var monkeyDescription = GameController.Instance.MonkeyDescriptions[player.PlayerId - 1];
             PopulationText.text = player.Population.ToString();
             ResourcesText.text = player.Resources.ToString();
             MoraleText.text = player.Morale.ToString();
@@ -96,7 +96,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 
         public void PlayerSwitch(PlayerStatus player)
         {
-            var monkeyDescription = GameController.Instance.MonkeyDescriptions[player.PlayerId];
+            var monkeyDescription = GameController.Instance.MonkeyDescriptions[player.PlayerId - 1];
             PopulationText.text = player.Population.ToString();
             ResourcesText.text = player.Resources.ToString();
             MoraleText.text = player.Morale.ToString();
