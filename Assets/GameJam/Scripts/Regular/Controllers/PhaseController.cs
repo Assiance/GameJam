@@ -46,7 +46,8 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 
             Debug.Log("Go Player 1");
             activePlayerName.text = "Player 1";
-            ActivePlayer = StateController.Instance.GetPlayerStatsByNumber(1);
+            ActivePlayer = StateController.Instance.SetActivePlayer(1);
+            
             if (ActivePlayer.IsAlive)
             {
                 ActivePlayer.MyTurn = true;
@@ -62,7 +63,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 
             Debug.Log("Go Player 2");
             activePlayerName.text = "Player 2";
-            ActivePlayer = StateController.Instance.GetPlayerStatsByNumber(2);
+            ActivePlayer = StateController.Instance.SetActivePlayer(2);
             if (ActivePlayer.IsAlive)
             {
                 ActivePlayer.MyTurn = true;
@@ -78,7 +79,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 
             Debug.Log("Go Player 3");
             activePlayerName.text = "Player 3";
-            ActivePlayer = StateController.Instance.GetPlayerStatsByNumber(3);
+            ActivePlayer = StateController.Instance.SetActivePlayer(3);
             if (ActivePlayer.IsAlive)
             {
                 ActivePlayer.MyTurn = true;
@@ -94,7 +95,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 
             Debug.Log("Go Player 4");
             activePlayerName.text = "Player 4";
-            ActivePlayer = StateController.Instance.GetPlayerStatsByNumber(4);
+            ActivePlayer = StateController.Instance.SetActivePlayer(4);
             if (ActivePlayer.IsAlive)
             {
                 ActivePlayer.MyTurn = true;
@@ -126,7 +127,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             }
 
             Debug.Log("Update Players");
-            UpdatePlayers();
+            //UpdatePlayers();
 
             if (roundNumber < TotalRounds)
             {
@@ -171,14 +172,6 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             foreach (var choice in StateController.Instance.Choices)
             {
                 choice.DoExecute = false;
-            }
-        }
-
-        public void UpdatePlayers()
-        {
-            foreach (var player in StateController.Instance.PlayerStats)
-            {
-                player.UpdateText();
             }
         }
 

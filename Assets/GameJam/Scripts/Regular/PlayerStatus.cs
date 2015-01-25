@@ -12,13 +12,6 @@ namespace Assets.GameJam.Scripts.Regular
     [Serializable]
     public class PlayerStatus : MyMonoBehaviour
     {
-        public Text PopulationText;
-        public Text ResourcesText;
-        public Text MoraleText;
-        public Text CharacterName;
-        public Text CharacterDescription;
-        public Image CharacterPortrait;
-
         public int PlayerId;
         public bool IsAlive = true;
         public int Population;
@@ -31,21 +24,13 @@ namespace Assets.GameJam.Scripts.Regular
 
         void Start()
         {
-            var monkeyDescription = GameController.Instance.MonkeyDescriptions[PlayerId];
-            PopulationText.text = Population.ToString();
-            ResourcesText.text = Resources.ToString();
-            MoraleText.text = Morale.ToString();
-            CharacterName.text = monkeyDescription.Name;
-            CharacterDescription.text = monkeyDescription.Description;
+            //var monkeyDescription = GameController.Instance.MonkeyDescriptions[PlayerId];
+            //PopulationText.text = Population.ToString();
+            //ResourcesText.text = Resources.ToString();
+            //MoraleText.text = Morale.ToString();
+            //CharacterName.text = monkeyDescription.Name;
+            //CharacterDescription.text = monkeyDescription.Description;
 
         }
-
-        public void UpdateText()
-        {
-            PopulationText.text = Population.ToString();
-            ResourcesText.text = Resources.ToString();
-            MoraleText.text = Morale.ToString();
-        }
-
     }
 }
