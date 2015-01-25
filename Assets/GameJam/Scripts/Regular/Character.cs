@@ -90,7 +90,6 @@ namespace Assets.GameJam.Scripts.Regular
 
         public void GoToCharacterScreen()
         {
-            BaseSoundController.Instance.PlaySoundByIndex(3, Vector2.zero);
             Application.LoadLevel("CharacterScene");
         }
   
