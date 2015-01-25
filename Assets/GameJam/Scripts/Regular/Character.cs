@@ -71,8 +71,7 @@ namespace Assets.GameJam.Scripts.Regular
             else
             {
                 bool sel = false;
-                stream.Serialize(ref sel);
-                readNetworkIsSelected = sel;
+                stream.Serialize(ref IsSelected);
             }
         }
     }
