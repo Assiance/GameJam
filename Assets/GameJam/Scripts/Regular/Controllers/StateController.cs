@@ -87,7 +87,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             {
                 if (PlayerStats.FindAll(i => i.IsAlive == true).Count == 1)
                 {
-                    //WIN!!!
+                    GameController.Instance.Win();
                 }
 
                 yield return new WaitForSeconds(1f);
