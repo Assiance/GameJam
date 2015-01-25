@@ -49,6 +49,9 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         public Text MoraleText;
         public Text CharacterName;
         public Image CharacterPortrait;
+        public Text Scenario1Text;
+        public Text Scenario2Text;
+        public Text Scenario3Text;
 
         void Start()
         {

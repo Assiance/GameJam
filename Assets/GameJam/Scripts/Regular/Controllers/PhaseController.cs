@@ -204,7 +204,8 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
                 if (value != null)
                 {
                     Debug.Log("Successfully added scenario 1");
-                    player.gameObject.AddComponent(value);
+                    var scene = player.gameObject.AddComponent(value) as BaseScenario;
+                    StateController.Instance.Scenario1Text.text = scene.Name;
                 }
                 // Repeat for scenario 2 and 3
                 var scenario2 = GetRandom(scenarios.Count, 0, scenarioIds);
@@ -213,14 +214,16 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
                 if (value != null)
                 {
                     Debug.Log("Succesfully added scenario 2");
-                    player.gameObject.AddComponent(value);
+                    var scene = player.gameObject.AddComponent(value) as BaseScenario;
+                    StateController.Instance.Scenario2Text.text = scene.Name;
                 }
                 var scenario3 = GetRandom(scenarios.Count, 0, scenarioIds);
                 value = scenarios.FirstOrDefault(x => x.Key == scenario3).Value;
                 if (value != null)
                 {
                     Debug.Log("Succesfully added scenario 3");
-                    player.gameObject.AddComponent(value);
+                    var scene = player.gameObject.AddComponent(value) as BaseScenario;
+                    StateController.Instance.Scenario3Text.text = scene.Name;
                 }
 
                 // No need to add scenario 3 to the list as we're done now.

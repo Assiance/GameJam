@@ -1006,6 +1006,9 @@ MonoBehaviour:
   MoraleText: {fileID: 1332398833}
   CharacterName: {fileID: 1723544496}
   CharacterPortrait: {fileID: 0}
+  Scenario1Text: {fileID: 191262640}
+  Scenario2Text: {fileID: 968724016}
+  Scenario3Text: {fileID: 458916295}
 --- !u!114 &864973291
 MonoBehaviour:
   m_ObjectHideFlags: 0
