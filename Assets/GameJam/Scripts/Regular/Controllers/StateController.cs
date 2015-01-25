@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -50,14 +51,16 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             Choices = new List<BaseChoice>();
 
             InitiateBrain();
+
+            StartCoroutine(DeathCheck());
         }
 
         public void InitiateBrain()
         {
-            var players = FindObjectsOfType<PlayerStatus>();
-            foreach (var player in players)
+            PlayerStats = FindObjectsOfType<PlayerStatus>().ToList();
+
+            foreach (var player in PlayerStats)
             {
-                PlayerStats.AddRange(player.GetComponents<PlayerStatus>());
                 Events.AddRange(player.GetComponents<BaseEvent>());
                 Scenarios.AddRange(player.GetComponents<BaseScenario>());
                 Choices.AddRange(player.GetComponents<BaseChoice>());
@@ -67,6 +70,28 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         public PlayerStatus GetPlayerStatsByNumber(int playerNumber)
         {
             return PlayerStats.First(i => i.PlayerId == playerNumber);
+        }
+
+        IEnumerator DeathCheck()
+        {
+            while (true)
+            {
+                PlayerStats.FindAll(i => i.Population <= 0 || i.Resources <= 0 || i.Morale <= 0).ForEach(i => i.IsAlive = false);
+                yield return new WaitForSeconds(1f);
+            }
+        }
+
+        IEnumerator WinCheck()
+        {
+            while (true)
+            {
+                if (PlayerStats.FindAll(i => i.IsAlive == true).Count == 1)
+                {
+                    //WIN!!!
+                }
+
+                yield return new WaitForSeconds(1f);
+            }
         }
     }
 }

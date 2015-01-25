@@ -7,6 +7,7 @@ using Assets.GameJam.Scripts.Regular.Choices;
 using Assets.GameJam.Scripts.Regular.Events;
 using Assets.GameJam.Scripts.Regular.General;
 using Assets.GameJam.Scripts.Regular.Scenarios;
+using UnityEditorInternal;
 using UnityEngine;
 
 namespace Assets.GameJam.Scripts.Regular.Controllers
@@ -18,6 +19,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         private int roundNumber;
         private int phaseNumber;
         public float RoundTime = 15f;
+        public PlayerStatus ActivePlayer;
 
         void Start()
         {
@@ -36,7 +38,43 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         IEnumerator StartTimer()
         {
             Debug.Log("Started Timer");
-            yield return new WaitForSeconds(RoundTime);
+
+            Debug.Log("Go Player 1");
+            ActivePlayer = StateController.Instance.GetPlayerStatsByNumber(1);
+            if (ActivePlayer.IsAlive)
+            {
+                ActivePlayer.MyTurn = true;
+                yield return new WaitForSeconds(RoundTime);
+                ActivePlayer.MyTurn = false;
+            }
+
+            Debug.Log("Go Player 2");
+            ActivePlayer = StateController.Instance.GetPlayerStatsByNumber(2);
+            if (ActivePlayer.IsAlive)
+            {
+                ActivePlayer.MyTurn = true;
+                yield return new WaitForSeconds(RoundTime);
+                ActivePlayer.MyTurn = false;
+            }
+
+            Debug.Log("Go Player 3");
+            ActivePlayer = StateController.Instance.GetPlayerStatsByNumber(3);
+            if (ActivePlayer.IsAlive)
+            {
+                ActivePlayer.MyTurn = true;
+                yield return new WaitForSeconds(RoundTime);
+                ActivePlayer.MyTurn = false;
+            }
+
+            Debug.Log("Go Player 4");
+            ActivePlayer = StateController.Instance.GetPlayerStatsByNumber(4);
+            if (ActivePlayer.IsAlive)
+            {
+                ActivePlayer.MyTurn = true;
+                yield return new WaitForSeconds(RoundTime);
+                ActivePlayer.MyTurn = false;
+            }
+
             CycleRound();
         }
 
@@ -48,7 +86,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             {
                 var choices = player.gameObject.GetComponents<BaseChoice>();
 
-                foreach (IChoice choice in choices.Where(i => i.DoExecute == false))
+                foreach (IChoice choice in choices.Where(i => i.DoExecute == true))
                 {
                     choice.Execute();
                 }
@@ -67,7 +105,6 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
                 roundNumber = 0;
                 Debug.Log("Cycle Phase");
                 CyclePhase();
-                //StateController NewPhas
             }
         }
 
@@ -83,7 +120,6 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
                 phaseNumber++;
                 roundNumber = 0;
                 StartNewRound();
-                //StateController InitiatePHase
             }
             else
             {
@@ -131,6 +167,30 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
             {
                 player.gameObject.AddComponent<TornadoEvent>();
             }
+        }
+
+        public void SelectGather()
+        {
+            ActivePlayer.GetComponent<GatherChoice>().DoExecute = true;
+        }
+
+        public void SelectRaid()
+        {
+            ActivePlayer.GetComponent<RaidChoice>().DoExecute = true;
+        }
+        public void SelectScout()
+        {
+            ActivePlayer.GetComponent<ScoutChoice>().DoExecute = true;
+        }
+
+        public void SelectTrade()
+        {
+            ActivePlayer.GetComponent<TradeChoice>().DoExecute = true;
+        }
+
+        public void SelectWorship()
+        {
+            ActivePlayer.GetComponent<WorshipChoice>().DoExecute = true;
         }
     }
 }

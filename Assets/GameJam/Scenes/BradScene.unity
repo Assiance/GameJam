@@ -302,8 +302,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -6.29998779, y: -8.69999695}
-  m_SizeDelta: {x: 100, y: 23}
+  m_AnchoredPosition: {x: -6.40505981, y: -8.85961914}
+  m_SizeDelta: {x: 99.7900009, y: 23.3190002}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &202537426
 MonoBehaviour:
@@ -367,9 +367,9 @@ RectTransform:
   m_Father: {fileID: 1708169684}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 473.399994, y: 104.900002}
-  m_SizeDelta: {x: 946, y: 210}
+  m_AnchorMax: {x: 1, y: .38500002}
+  m_AnchoredPosition: {x: 0, y: .474990845}
+  m_SizeDelta: {x: -6.10349998e-05, y: 1.15000153}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &213443359
 MonoBehaviour:
@@ -427,10 +427,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1911132144}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -6.20001221, y: 54.6999969}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: .543000042}
+  m_AnchorMax: {x: .950153708, y: 1}
+  m_AnchoredPosition: {x: -3.20001221, y: -1.80000305}
+  m_SizeDelta: {x: -14, y: 5}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &242496564
 MonoBehaviour:
@@ -734,7 +734,6 @@ GameObject:
   - 222: {fileID: 283344883}
   - 114: {fileID: 283344882}
   - 114: {fileID: 283344881}
-  - 114: {fileID: 283344884}
   m_Layer: 5
   m_Name: TradeButton
   m_TagString: Untagged
@@ -798,7 +797,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 283344882}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864973291}
+        m_MethodName: SelectTrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &283344882
@@ -828,20 +839,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 283344879}
---- !u!114 &283344884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 283344879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b8480ebe48bba438437750247adc8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResourcesModifier: 0
-  PopulationModifier: 0
-  MoraleModifier: 0
 --- !u!1 &285848341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,10 +1055,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1911132144}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -6.29998779, y: -59.2000122}
-  m_SizeDelta: {x: 100, y: 75}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: .367000014}
+  m_AnchoredPosition: {x: -1, y: -3.81469999e-06}
+  m_SizeDelta: {x: -9, y: 1.14439999e-05}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &438737307
 MonoBehaviour:
@@ -1611,7 +1608,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalRounds: 5
   TotalPhases: 5
-  RoundTime: 2
+  RoundTime: 20
+  ActivePlayer: {fileID: 0}
 --- !u!4 &864973293
 Transform:
   m_ObjectHideFlags: 0
@@ -2015,6 +2013,135 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 979963508}
+--- !u!1 &985584652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 985584653}
+  - 114: {fileID: 985584659}
+  - 114: {fileID: 985584658}
+  - 114: {fileID: 985584657}
+  - 114: {fileID: 985584656}
+  - 114: {fileID: 985584655}
+  - 114: {fileID: 985584654}
+  m_Layer: 0
+  m_Name: Player4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &985584653
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985584652}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1811761850}
+  m_RootOrder: 3
+--- !u!114 &985584654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985584652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb13027b377cad34d860893c62b03a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &985584655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985584652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b8480ebe48bba438437750247adc8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &985584656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985584652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c949309abca2243b924c0ab56821b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &985584657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985584652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055d0317535466a4298ae3874127a3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &985584658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985584652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caa2dfe45f7ec14b9101cc130774e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &985584659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 985584652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162548fcf9a574a4ea6674193f0f9f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopulationText: {fileID: 2103205978}
+  ResourcesText: {fileID: 265578339}
+  MoraleText: {fileID: 1332398833}
+  CharacterName: {fileID: 202537426}
+  CharacterDescription: {fileID: 438737307}
+  CharacterPortrait: {fileID: 242496564}
+  myButton: {fileID: 0}
+  PlayerId: 4
+  IsAlive: 1
+  Population: 100
+  Resources: 100
+  Morale: 100
+  SkillMultiplier: 1
+  Name: 
+  MyTurn: 0
 --- !u!1 &1031293271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,6 +2208,135 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1031293271}
+--- !u!1 &1087210532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1087210533}
+  - 114: {fileID: 1087210539}
+  - 114: {fileID: 1087210538}
+  - 114: {fileID: 1087210537}
+  - 114: {fileID: 1087210536}
+  - 114: {fileID: 1087210535}
+  - 114: {fileID: 1087210534}
+  m_Layer: 0
+  m_Name: Player2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1087210533
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087210532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1811761850}
+  m_RootOrder: 1
+--- !u!114 &1087210534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087210532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb13027b377cad34d860893c62b03a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &1087210535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087210532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b8480ebe48bba438437750247adc8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &1087210536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087210532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c949309abca2243b924c0ab56821b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &1087210537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087210532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055d0317535466a4298ae3874127a3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &1087210538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087210532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caa2dfe45f7ec14b9101cc130774e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &1087210539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087210532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162548fcf9a574a4ea6674193f0f9f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopulationText: {fileID: 2103205978}
+  ResourcesText: {fileID: 265578339}
+  MoraleText: {fileID: 1332398833}
+  CharacterName: {fileID: 202537426}
+  CharacterDescription: {fileID: 438737307}
+  CharacterPortrait: {fileID: 242496564}
+  myButton: {fileID: 0}
+  PlayerId: 2
+  IsAlive: 1
+  Population: 100
+  Resources: 100
+  Morale: 100
+  SkillMultiplier: 1
+  Name: 
+  MyTurn: 0
 --- !u!1 &1097696684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2417,7 +2673,6 @@ GameObject:
   - 222: {fileID: 1280661219}
   - 114: {fileID: 1280661218}
   - 114: {fileID: 1280661217}
-  - 114: {fileID: 1280661220}
   m_Layer: 5
   m_Name: ForageButton
   m_TagString: Untagged
@@ -2481,7 +2736,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1280661218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864973291}
+        m_MethodName: SelectGather
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1280661218
@@ -2511,20 +2778,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1280661215}
---- !u!114 &1280661220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1280661215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9caa2dfe45f7ec14b9101cc130774e72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResourcesModifier: 2
-  PopulationModifier: 0
-  MoraleModifier: 0
 --- !u!1 &1312049787
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,7 +2789,6 @@ GameObject:
   - 222: {fileID: 1312049791}
   - 114: {fileID: 1312049790}
   - 114: {fileID: 1312049789}
-  - 114: {fileID: 1312049792}
   m_Layer: 5
   m_Name: RaidButton
   m_TagString: Untagged
@@ -2600,7 +2852,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1312049790}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864973291}
+        m_MethodName: SelectRaid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1312049790
@@ -2630,20 +2894,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1312049787}
---- !u!114 &1312049792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1312049787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 055d0317535466a4298ae3874127a3dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResourcesModifier: 0
-  PopulationModifier: 0
-  MoraleModifier: 0
 --- !u!1 &1332398831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,7 +2971,6 @@ GameObject:
   - 222: {fileID: 1348691800}
   - 114: {fileID: 1348691799}
   - 114: {fileID: 1348691798}
-  - 114: {fileID: 1348691801}
   m_Layer: 5
   m_Name: WorshipButton
   m_TagString: Untagged
@@ -2785,7 +3034,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1348691799}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864973291}
+        m_MethodName: SelectWorship
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1348691799
@@ -2815,20 +3076,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1348691796}
---- !u!114 &1348691801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1348691796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb13027b377cad34d860893c62b03a6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResourcesModifier: 0
-  PopulationModifier: 0
-  MoraleModifier: 2
 --- !u!1 &1397674297
 GameObject:
   m_ObjectHideFlags: 0
@@ -3541,11 +3788,14 @@ MonoBehaviour:
   CharacterDescription: {fileID: 438737307}
   CharacterPortrait: {fileID: 242496564}
   myButton: {fileID: 0}
+  PlayerId: 1
+  IsAlive: 1
   Population: 100
   Resources: 100
   Morale: 100
   SkillMultiplier: 1
   Name: 
+  MyTurn: 0
 --- !u!4 &1768975673
 Transform:
   m_ObjectHideFlags: 0
@@ -3650,6 +3900,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1768975673}
+  - {fileID: 1087210533}
+  - {fileID: 1955004420}
+  - {fileID: 985584653}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &1911132143
@@ -3684,10 +3937,10 @@ RectTransform:
   - {fileID: 202537425}
   m_Father: {fileID: 1708169684}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -407.5, y: -105.699997}
-  m_SizeDelta: {x: 120, y: 210}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: .118000008, y: .38500002}
+  m_AnchoredPosition: {x: -.25, y: .524991989}
+  m_SizeDelta: {x: -.499969989, y: 1.04999924}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1911132145
 MonoBehaviour:
@@ -3716,6 +3969,135 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1911132143}
+--- !u!1 &1955004413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1955004420}
+  - 114: {fileID: 1955004419}
+  - 114: {fileID: 1955004418}
+  - 114: {fileID: 1955004417}
+  - 114: {fileID: 1955004416}
+  - 114: {fileID: 1955004415}
+  - 114: {fileID: 1955004414}
+  m_Layer: 0
+  m_Name: Player3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1955004414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1955004413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb13027b377cad34d860893c62b03a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &1955004415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1955004413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b8480ebe48bba438437750247adc8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &1955004416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1955004413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c949309abca2243b924c0ab56821b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &1955004417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1955004413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055d0317535466a4298ae3874127a3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &1955004418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1955004413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caa2dfe45f7ec14b9101cc130774e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 6
+  PopulationModifier: 6
+  MoraleModifier: 6
+--- !u!114 &1955004419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1955004413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162548fcf9a574a4ea6674193f0f9f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopulationText: {fileID: 2103205978}
+  ResourcesText: {fileID: 265578339}
+  MoraleText: {fileID: 1332398833}
+  CharacterName: {fileID: 202537426}
+  CharacterDescription: {fileID: 438737307}
+  CharacterPortrait: {fileID: 242496564}
+  myButton: {fileID: 0}
+  PlayerId: 3
+  IsAlive: 1
+  Population: 100
+  Resources: 100
+  Morale: 100
+  SkillMultiplier: 1
+  Name: 
+  MyTurn: 0
+--- !u!4 &1955004420
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1955004413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1811761850}
+  m_RootOrder: 2
 --- !u!1 &1992204822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,7 +4109,6 @@ GameObject:
   - 222: {fileID: 1992204826}
   - 114: {fileID: 1992204825}
   - 114: {fileID: 1992204824}
-  - 114: {fileID: 1992204827}
   m_Layer: 5
   m_Name: ScoutButton
   m_TagString: Untagged
@@ -3791,7 +4172,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1992204825}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 864973291}
+        m_MethodName: SelectScout
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1992204825
@@ -3821,20 +4214,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1992204822}
---- !u!114 &1992204827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1992204822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7c949309abca2243b924c0ab56821b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResourcesModifier: 0
-  PopulationModifier: 0
-  MoraleModifier: 0
 --- !u!1 &2101608773
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,10 +4247,10 @@ RectTransform:
   - {fileID: 462278645}
   m_Father: {fileID: 1708169684}
   m_RootOrder: 8
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -177.800003, y: -25.2000008}
-  m_SizeDelta: {x: 330, y: 40}
+  m_AnchorMin: {x: .151000008, y: .410000026}
+  m_AnchorMax: {x: .472000033, y: .5}
+  m_AnchoredPosition: {x: -1, y: 3}
+  m_SizeDelta: {x: 4, y: 4}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2101608775
 MonoBehaviour:
@@ -3929,10 +4308,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1708169684}
   m_RootOrder: 2
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 68.0999985, y: -123.400002}
-  m_SizeDelta: {x: 100, y: 25}
+  m_AnchorMin: {x: .520000041, y: .161211088}
+  m_AnchorMax: {x: .617000043, y: .224512577}
+  m_AnchoredPosition: {x: -.900001526, y: -.900001526}
+  m_SizeDelta: {x: 2, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2103205978
 MonoBehaviour:

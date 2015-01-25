@@ -17,24 +17,26 @@ namespace Assets.GameJam.Scripts.Regular
         public Text CharacterName;
         public Text CharacterDescription;
         public Image CharacterPortrait;
-        public Button myButton;
 
-        public int PlayerId { get; set; }
+        public MonkeyDescription MonkeyDescription;
+        public int PlayerId;
+        public bool IsAlive = true;
         public int Population;
         public int Resources;
         public int Morale;
         public double SkillMultiplier = 1.0;
         public string Skill { get; set; }
         public string Name;
+        public bool MyTurn = false;
 
         void Start()
         {
             PopulationText.text = Population.ToString();
             ResourcesText.text = Resources.ToString();
             MoraleText.text = Morale.ToString();
-            CharacterName.text = "Average Monkey";
-            CharacterDescription.text = "Average Monkey enjoys long walks on the beach, eating bananas, and dancing around the campfire.";
-            
+            CharacterName.text = MonkeyDescription.Name;
+            CharacterDescription.text = MonkeyDescription.Description;
+
         }
 
         public void UpdateText()
