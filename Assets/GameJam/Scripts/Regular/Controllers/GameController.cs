@@ -7,7 +7,6 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 {
     public class GameController : MyMonoBehaviour
     {
-        public GameObject playerPrefab;
         #region Singleton
         private static GameController _instance;
         public static GameController Instance
@@ -38,6 +37,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         void Start()
         {
             MonkeyDescriptions = new List<MonkeyDescription>();
+            DontDestroyOnLoad(transform.gameObject);
         }
 
         public void Win()

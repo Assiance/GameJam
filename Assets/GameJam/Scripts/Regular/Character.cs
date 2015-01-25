@@ -10,9 +10,11 @@ namespace Assets.GameJam.Scripts.Regular
 {
     public class Character : MyMonoBehaviour
     {
-        public MonkeyDescription MonkeyDescription;
-
         private static int playerCount = 0;
+
+        void Start()
+        {
+        }
 
         void Update()
         {
@@ -24,42 +26,48 @@ namespace Assets.GameJam.Scripts.Regular
 
         public void Pirate()
         {
-            GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            var MonkeyDescriptionComponent = new MonkeyDescription();
+            GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
             Debug.Log("Selected Character " + playerCount);
         }
 
         public void Raider()
         {
-            int i = 0; GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            var MonkeyDescriptionComponent = new MonkeyDescription();
+            GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
             Debug.Log("Selected Character " + playerCount);
         }
 
         public void Hunter()
         {
-            GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            var MonkeyDescriptionComponent = new MonkeyDescription();
+            GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
             Debug.Log("Selected Character " + playerCount);
         }
 
         public void Prist()
         {
-            GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            var MonkeyDescriptionComponent = new MonkeyDescription();
+            GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
             Debug.Log("Selected Character " + playerCount);
         }
 
         public void Spy()
         {
-            GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            var MonkeyDescriptionComponent = new MonkeyDescription();
+            GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
             Debug.Log("Selected Character " + playerCount);
         }
 
         public void Merchant()
         {
-            GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
+            var MonkeyDescriptionComponent = new MonkeyDescription();
+            GameController.Instance.MonkeyDescriptions.Add(MonkeyDescriptionComponent);
             playerCount++;
             Debug.Log("Selected Character " + playerCount);
         }

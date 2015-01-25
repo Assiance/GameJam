@@ -1794,11 +1794,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b28f697ce61c4704284ff51e5356c61f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PopulationText: {fileID: 0}
-  ResourcesText: {fileID: 0}
-  MoraleText: {fileID: 0}
-  CharacterName: {fileID: 0}
-  CharacterDescription: {fileID: 0}
+  PopulationText: {fileID: 2103205978}
+  ResourcesText: {fileID: 265578339}
+  MoraleText: {fileID: 1332398833}
+  CharacterName: {fileID: 202537426}
+  CharacterDescription: {fileID: 438737307}
   CharacterPortrait: {fileID: 0}
 --- !u!114 &864973291
 MonoBehaviour:
