@@ -164,67 +164,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &318410556
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 318410557}
-  - 222: {fileID: 318410559}
-  - 114: {fileID: 318410558}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &318410557
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318410556}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.28131199, y: .933410406, z: .933410406}
-  m_Children: []
-  m_Father: {fileID: 1265629510}
-  m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -309, y: 158}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &318410558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318410556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &318410559
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318410556}
 --- !u!1 &537411630
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,14 +273,14 @@ RectTransform:
   m_GameObject: {fileID: 539469470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.70984745, y: 2.70690393, z: 1.44368207}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1265629510}
-  m_RootOrder: 1
+  m_Father: {fileID: 1488306088}
+  m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -42, y: -25}
-  m_SizeDelta: {x: 160, y: 100}
+  m_AnchoredPosition: {x: 242, y: 10}
+  m_SizeDelta: {x: 447, y: 356}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &539469472
 MonoBehaviour:
@@ -358,7 +297,7 @@ MonoBehaviour:
   m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 8
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -368,17 +307,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel libero
-    a orci lacinia pretium nec semper tellus. Donec dictum egestas felis vel ultricies.
-    Ut blandit vestibulum commodo. \n\nDonec scelerisque nisi diam. Sed mattis tempor
-    ornare. Sed efficitur laoreet ligula ac ultrices. Cras varius, risus sodales hendrerit
-    ornare, lorem justo varius ligula, sit amet finibus neque ex ac lacus. Integer
-    mollis commodo laoreet.\r\n\r\nSuspendisse feugiat lorem et tellus ornare, a interdum
-    metus pellentesque. Sed ipsum enim, pulvinar nec augue ut, luctus feugiat libero.
-    In sed tristique est. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris at elementum ligula. Maecenas non convallis augue. Cras a sollicitudin
-    sem, eget cursus turpis. Nulla porttitor malesuada velit, vitae porttitor tellus
-    interdum eu. "
+  m_Text: "Centuries ago, there were over 100 tribes of monkeys inhabiting Ape-Tastrophe
+    Island. But there's a problem. Once a year, during the aptly-named \"Chaos Season\"
+    the positing of Earth as it circles around the sun causes magnetic disturbances
+    in the polar ice caps that cause the island to....oh you don't care about all
+    that. \n\nBasically, bad things happen for a few months that force the monkeys
+    to get a little anxious. Well, very anxious to be precise. Help the monkeys by
+    choosing a leader and guiding them through 10 rounds of a fast-paced, stress-filled
+    race to survive the Chaos Season. Get what you need by trading with other players,
+    worship the island gods to heal your sick, and raid other players to pillage and
+    plunder. Choose your leader based on their special skills! What you do now is
+    up to you.\r\n"
 --- !u!222 &539469473
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -416,7 +355,7 @@ RectTransform:
   m_Children:
   - {fileID: 1649122994}
   m_Father: {fileID: 1265629510}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 221, y: -179}
@@ -932,8 +871,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .493785113, y: 1, z: 1}
   m_Children:
-  - {fileID: 318410557}
-  - {fileID: 539469471}
   - {fileID: 861023703}
   m_Father: {fileID: 1488306088}
   m_RootOrder: 2
@@ -1250,6 +1187,7 @@ RectTransform:
   - {fileID: 861956370}
   - {fileID: 1179522219}
   - {fileID: 1265629510}
+  - {fileID: 539469471}
   m_Father: {fileID: 212258297}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
@@ -1269,7 +1207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: .600000024, b: 0, a: 1}
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
