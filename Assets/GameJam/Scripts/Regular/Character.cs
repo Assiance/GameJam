@@ -52,6 +52,12 @@ namespace Assets.GameJam.Scripts.Regular
         {
             int i = 0;
         }
+
+
+        public void chooseChar()
+        {
+            int i = 0;
+        }
   
 
     
