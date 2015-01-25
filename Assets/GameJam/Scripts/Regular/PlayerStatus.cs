@@ -1,4 +1,5 @@
-﻿using Assets.GameJam.Scripts.Regular.General;
+﻿using Assets.GameJam.Scripts.Regular.Controllers;
+using Assets.GameJam.Scripts.Regular.General;
 using System;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -18,7 +19,6 @@ namespace Assets.GameJam.Scripts.Regular
         public Text CharacterDescription;
         public Image CharacterPortrait;
 
-        public MonkeyDescription MonkeyDescription;
         public int PlayerId;
         public bool IsAlive = true;
         public int Population;
@@ -31,11 +31,12 @@ namespace Assets.GameJam.Scripts.Regular
 
         void Start()
         {
+            var monkeyDescription = GameController.Instance.MonkeyDescriptions[PlayerId];
             PopulationText.text = Population.ToString();
             ResourcesText.text = Resources.ToString();
             MoraleText.text = Morale.ToString();
-            CharacterName.text = MonkeyDescription.Name;
-            CharacterDescription.text = MonkeyDescription.Description;
+            CharacterName.text = monkeyDescription.Name;
+            CharacterDescription.text = monkeyDescription.Description;
 
         }
 

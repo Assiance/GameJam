@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Assets.GameJam.Scripts.Regular.General;
 using UnityEngine;
 
@@ -32,19 +33,11 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         }
         #endregion
 
-        void OnServerInitialized()
-        {
-            SpawnPlayer();
-        }
+        public List<MonkeyDescription> MonkeyDescriptions;
 
-        void OnConnectedToServer()
+        void Start()
         {
-            SpawnPlayer();
-        }
-
-        private void SpawnPlayer()
-        {
-            Network.Instantiate(playerPrefab, new Vector3(0f, 2f, 0f), Quaternion.identity, 0);
+            MonkeyDescriptions = new List<MonkeyDescription>();
         }
 
         public void Win()
