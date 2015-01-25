@@ -277,6 +277,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 
         public void SelectGather()
         {
+
             BaseSoundController.Instance.PlaySoundByIndex(3, Vector2.zero);
             ActivePlayer.GetComponent<GatherChoice>().DoExecute = true;
         }
