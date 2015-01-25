@@ -10,24 +10,32 @@ namespace Assets.GameJam.Scripts.Regular
     public class Character : MyMonoBehaviour
     {
         public bool IsSelected;
+        private bool readNetworkIsSelected;
         private SpriteRenderer characterSprite;
         private Vector3 _newPosition;
+        public bool AcceptsInput = true;
 
         void Start()
         {
             characterSprite = gameObject.GetComponent<SpriteRenderer>();
-        }
 
-        void FixedUpdate()
-        {
-            if (IsSelected)
-            {
-                characterSprite.color = Color.grey;
-            }
+            AcceptsInput = networkView.isMine;
         }
 
         void Update()
         {
+            if (!AcceptsInput)
+            {
+                IsSelected = readNetworkIsSelected;
+                // don't use player input
+                return;
+            }
+
+            if (IsSelected)
+            {
+                characterSprite.color = Color.grey;
+            }
+
             UpdateTouchInputs();
         }
 
@@ -49,6 +57,22 @@ namespace Assets.GameJam.Scripts.Regular
                 Debug.Log("I'm hitting " + _hit.collider.name);
                 var character = _hit.transform.gameObject.GetComponent<Character>();
                 character.IsSelected = true;
+            }
+        }
+
+        private void OnSerializeNetworkView(BitStream stream)
+        {
+            // writing information, push current paddle position
+            if (stream.isWriting)
+            {
+                stream.Serialize(ref IsSelected);
+            }
+            // reading information, read paddle position
+            else
+            {
+                bool sel = false;
+                stream.Serialize(ref sel);
+                readNetworkIsSelected = sel;
             }
         }
     }
