@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalRounds: 5
   TotalPhases: 5
-  RoundTime: 8
+  RoundTime: 2
   ActivePlayer: {fileID: 0}
   timerSeconds: {fileID: 651465432}
   activePlayerName: {fileID: 1723544496}

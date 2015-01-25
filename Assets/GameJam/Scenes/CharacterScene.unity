@@ -405,9 +405,6 @@ GameObject:
   - 224: {fileID: 150039299}
   - 222: {fileID: 150039303}
   - 114: {fileID: 150039302}
-  - 114: {fileID: 150039301}
-  - 114: {fileID: 150039300}
-  - 114: {fileID: 150039304}
   m_Layer: 5
   m_Name: CharacterSelectRaider
   m_TagString: Untagged
@@ -436,48 +433,6 @@ RectTransform:
   m_AnchoredPosition: {x: -200, y: -88}
   m_SizeDelta: {x: 450, y: 200}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &150039300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 150039298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MonkeyDescriptionComponent: {fileID: 150039304}
---- !u!114 &150039301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 150039298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 150039300}
-          m_MethodName: Raider
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &150039302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,19 +460,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 150039298}
---- !u!114 &150039304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 150039298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 166128bbce0a9c547bab162f5509037a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  Description: 
 --- !u!1 &157308615
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescriptionComponent: {fileID: 0}
+  SelectColor: {r: .321568638, g: .192156866, b: 0, a: 0}
 --- !u!114 &157308620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1283,7 +1225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescriptionComponent: {fileID: 0}
+  SelectColor: {r: .321568638, g: .192156866, b: 0, a: 0}
 --- !u!114 &415509234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1824,9 +1766,6 @@ GameObject:
   - 224: {fileID: 587760096}
   - 222: {fileID: 587760098}
   - 114: {fileID: 587760097}
-  - 114: {fileID: 587760099}
-  - 114: {fileID: 587760100}
-  - 114: {fileID: 587760101}
   m_Layer: 5
   m_Name: CharacterSelectMerchant
   m_TagString: Untagged
@@ -1882,61 +1821,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 587760095}
---- !u!114 &587760099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 587760095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 166128bbce0a9c547bab162f5509037a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  Description: 
---- !u!114 &587760100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 587760095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MonkeyDescriptionComponent: {fileID: 587760099}
---- !u!114 &587760101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 587760095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 587760100}
-          m_MethodName: Merchant
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &640989077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,7 +2404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a015f85cfebd8714f8d34b692cbb5236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescriptions: []
 --- !u!4 &864973293
 Transform:
   m_ObjectHideFlags: 0
@@ -2873,8 +2756,6 @@ GameObject:
   - 222: {fileID: 1096838472}
   - 114: {fileID: 1096838471}
   - 114: {fileID: 1096838474}
-  - 114: {fileID: 1096838473}
-  - 114: {fileID: 1096838475}
   m_Layer: 5
   m_Name: CharacterSelectHunter
   m_TagString: Untagged
@@ -2930,18 +2811,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1096838469}
---- !u!114 &1096838473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1096838469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MonkeyDescriptionComponent: {fileID: 1096838475}
 --- !u!114 &1096838474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2958,7 +2827,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1096838473}
+        - m_Target: {fileID: 0}
           m_MethodName: Hunter
           m_Mode: 1
           m_Arguments:
@@ -2972,19 +2841,6 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!114 &1096838475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1096838469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 166128bbce0a9c547bab162f5509037a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Brad
-  Description: 
 --- !u!1 &1104171889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,9 +2851,6 @@ GameObject:
   - 224: {fileID: 1104171890}
   - 222: {fileID: 1104171894}
   - 114: {fileID: 1104171893}
-  - 114: {fileID: 1104171892}
-  - 114: {fileID: 1104171891}
-  - 114: {fileID: 1104171895}
   m_Layer: 5
   m_Name: CharacterSelectPriest
   m_TagString: Untagged
@@ -3026,48 +2879,6 @@ RectTransform:
   m_AnchoredPosition: {x: 303, y: 113}
   m_SizeDelta: {x: 450, y: 200}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &1104171891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1104171889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MonkeyDescriptionComponent: {fileID: 1104171895}
---- !u!114 &1104171892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1104171889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1104171891}
-          m_MethodName: Prist
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1104171893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3095,19 +2906,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1104171889}
---- !u!114 &1104171895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1104171889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 166128bbce0a9c547bab162f5509037a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  Description: 
 --- !u!1 &1114740669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3441,7 +3239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescriptionComponent: {fileID: 0}
+  SelectColor: {r: .321568638, g: .192156866, b: 0, a: 0}
 --- !u!114 &1341988601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3844,7 +3642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescriptionComponent: {fileID: 0}
+  SelectColor: {r: .321568638, g: .192156866, b: 0, a: 0}
 --- !u!114 &1587325716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4113,9 +3911,6 @@ GameObject:
   - 224: {fileID: 1702855953}
   - 222: {fileID: 1702855957}
   - 114: {fileID: 1702855956}
-  - 114: {fileID: 1702855955}
-  - 114: {fileID: 1702855954}
-  - 114: {fileID: 1702855958}
   m_Layer: 5
   m_Name: CharacterSelectSpy
   m_TagString: Untagged
@@ -4144,48 +3939,6 @@ RectTransform:
   m_AnchoredPosition: {x: 181, y: -88}
   m_SizeDelta: {x: 450, y: 200}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &1702855954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1702855952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MonkeyDescriptionComponent: {fileID: 1702855958}
---- !u!114 &1702855955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1702855952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1702855954}
-          m_MethodName: Spy
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1702855956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4213,19 +3966,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1702855952}
---- !u!114 &1702855958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1702855952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 166128bbce0a9c547bab162f5509037a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  Description: 
 --- !u!1 &1707456481
 GameObject:
   m_ObjectHideFlags: 0
@@ -5054,7 +4794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescriptionComponent: {fileID: 0}
+  SelectColor: {r: .321568638, g: .192156866, b: 0, a: 0}
 --- !u!114 &2086748269
 MonoBehaviour:
   m_ObjectHideFlags: 0
