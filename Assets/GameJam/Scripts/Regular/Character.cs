@@ -14,52 +14,54 @@ namespace Assets.GameJam.Scripts.Regular
 
         private static int playerCount = 1;
 
-        void Start()
-        {
-           
-        }
-
         void Update()
         {
-     
+            if (playerCount == 4)
+            {
+                Application.LoadLevel("GameScene");
+            }
         }
-
-       
 
         public void Pirate()
         {
             GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
             playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
 
         public void Raider()
         {
             int i = 0; GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
             playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
 
         public void Hunter()
         {
             GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
             playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
 
         public void Prist()
         {
             GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
             playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
 
         public void Spy()
         {
             GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
             playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
 
         public void Merchant()
         {
             GameController.Instance.MonkeyDescriptions.Add(GetComponent<MonkeyDescription>());
             playerCount++;
+            Debug.Log("Selected Character " + playerCount);
         }
   
 
