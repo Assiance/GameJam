@@ -51,26 +51,26 @@ namespace Assets.GameJam.Scripts.Regular
         }
 
 
-        private void OnConnectedToServer()
-            {
-                Debug.Log("Connected to server");
-                if (Network.connections.Length == 1)
-                {
-                    NetworkLevelLoader.Instance.LoadLevel("CharacterScene");
-                }
-                // this is the NetworkLevelLoader we wrote earlier in the chapter – pauses the network, loads the level, waits for the level to finish, and then unpauses the network 
-                //NetworkLevelLoader.Instance.LoadLevel("Game");
-            }
+        //private void OnConnectedToServer()
+        //    {
+        //        Debug.Log("Connected to server");
+        //        if (Network.connections.Length == 1)
+        //        {
+        //            NetworkLevelLoader.Instance.LoadLevel("CharacterScene");
+        //        }
+        //        // this is the NetworkLevelLoader we wrote earlier in the chapter – pauses the network, loads the level, waits for the level to finish, and then unpauses the network 
+        //        //NetworkLevelLoader.Instance.LoadLevel("Game");
+        //    }
 
-            private void OnServerInitialized()
-            {
-                Debug.Log("Server initialized");
-                if (Network.connections.Length == 1)
-                {
-                    NetworkLevelLoader.Instance.LoadLevel("CharacterScene");
-                }
-                //NetworkLevelLoader.Instance.LoadLevel("Game");
-            }
+        //    private void OnServerInitialized()
+        //    {
+        //        Debug.Log("Server initialized");
+        //        if (Network.connections.Length == 1)
+        //        {
+        //            NetworkLevelLoader.Instance.LoadLevel("CharacterScene");
+        //        }
+        //        //NetworkLevelLoader.Instance.LoadLevel("Game");
+        //    }
         
     }
 }

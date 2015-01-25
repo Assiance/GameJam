@@ -6,6 +6,7 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
 {
     public class GameController : MyMonoBehaviour
     {
+        public GameObject playerPrefab;
         #region Singleton
         private static GameController _instance;
         public static GameController Instance
@@ -31,7 +32,20 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         }
         #endregion
 
-        private PhaseController _phaseController { get; set; }
+        void OnServerInitialized()
+        {
+            SpawnPlayer();
+        }
+
+        void OnConnectedToServer()
+        {
+            SpawnPlayer();
+        }
+
+        private void SpawnPlayer()
+        {
+            Network.Instantiate(playerPrefab, new Vector3(0f, 2f, 0f), Quaternion.identity, 0);
+        }
 
         public void Win()
         {
