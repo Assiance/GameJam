@@ -9,60 +9,53 @@ namespace Assets.GameJam.Scripts.Regular
 {
     public class Character : MyMonoBehaviour
     {
-        public bool IsSelected;
-        private bool readNetworkIsSelected;
-        private SpriteRenderer characterSprite;
-        private Vector3 _newPosition;
-        public bool AcceptsInput = true;
+   
 
         void Start()
         {
-            characterSprite = gameObject.GetComponent<SpriteRenderer>();
+           
         }
 
         void Update()
         {
-            if (IsSelected)
-            {
-                characterSprite.color = Color.grey;
-            }
-
-            UpdateTouchInputs();
+     
         }
 
-        void UpdateTouchInputs()
+       
+
+        public void Pirate()
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                _newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-                GetHitObject();
-            }
+            int i = 0;
         }
 
-        private void GetHitObject()
+        public void Raider()
         {
-            var _hit = Physics2D.Raycast(_newPosition, Vector2.zero);
-            if (_hit.collider != null)
-            {
-                Debug.Log("I'm hitting " + _hit.collider.name);
-                var character = _hit.transform.gameObject.GetComponent<Character>();
-                character.IsSelected = true;
-            }
+            int i = 0;
         }
 
-        private void OnSerializeNetworkView(BitStream stream)
+        public void Hunter()
         {
-            // writing information, push current paddle position
-            if (stream.isWriting)
-            {
-                stream.Serialize(ref IsSelected);
-            }
-            // reading information, read paddle position
-            else
-            {
-                stream.Serialize(ref IsSelected);
-            }
+            int i = 0;
         }
+
+        public void Prist()
+        {
+            int i = 0;
+        }
+
+        public void Spy()
+        {
+            int i = 0;
+        }
+
+        public void Merchant()
+        {
+            int i = 0;
+        }
+  
+
+    
+
+    
     }
 }
