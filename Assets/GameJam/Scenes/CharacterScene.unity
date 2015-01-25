@@ -2477,6 +2477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 0}
+  MonkeyDescriptions: []
 --- !u!4 &864973293
 Transform:
   m_ObjectHideFlags: 0
@@ -2897,7 +2898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescription: {fileID: 0}
+  MonkeyDescription: {fileID: 1096838475}
 --- !u!114 &1096838474
 MonoBehaviour:
   m_ObjectHideFlags: 0
