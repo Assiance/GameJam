@@ -532,6 +532,7 @@ GameObject:
   - 92: {fileID: 537411633}
   - 124: {fileID: 537411632}
   - 81: {fileID: 537411631}
+  - 114: {fileID: 537411636}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -604,6 +605,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &537411636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 537411630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5eb695709591848ae78e0abc0d2222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameSounds:
+  - {fileID: 8300000, guid: 7a25d6199da904044b09e509ff000748, type: 3}
+  - {fileID: 8300000, guid: f3ac4dc036329d04f8be356c0316a91c, type: 3}
+  - {fileID: 8300000, guid: 88fb91a244dc48d4fb64b545fc6e4d4e, type: 3}
+  - {fileID: 8300000, guid: 35b5a3e61bcc2ca42837c7cde5ef18ee, type: 3}
+  - {fileID: 8300000, guid: f9848bc2c39e6ca448ab8490e4ce520b, type: 3}
+  - {fileID: 8300000, guid: bd36259c414663140b8a61960f3d7582, type: 3}
+  - {fileID: 8300000, guid: c8916fd18e3b42741970e744095e952f, type: 3}
+  Volume: 500
+  GamePrefsName: DefaultGame
 --- !u!1 &619913922
 GameObject:
   m_ObjectHideFlags: 0
