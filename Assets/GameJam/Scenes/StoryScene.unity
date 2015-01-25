@@ -176,6 +176,7 @@ GameObject:
   - 92: {fileID: 537411633}
   - 124: {fileID: 537411632}
   - 81: {fileID: 537411631}
+  - 114: {fileID: 537411636}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -248,6 +249,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &537411636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 537411630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5eb695709591848ae78e0abc0d2222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameSounds:
+  - {fileID: 8300000, guid: 7a25d6199da904044b09e509ff000748, type: 3}
+  Volume: 100
+  GamePrefsName: DefaultGame
 --- !u!1 &539469470
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescription: {fileID: 0}
+  SelectColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &861023705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,8 +562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a015f85cfebd8714f8d34b692cbb5236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 0}
-  MonkeyDescriptions: []
 --- !u!4 &864973293
 Transform:
   m_ObjectHideFlags: 0
@@ -697,7 +711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescription: {fileID: 0}
+  SelectColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &900978369
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -970,7 +984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescription: {fileID: 0}
+  SelectColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &1309371703
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1058,7 +1072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescription: {fileID: 0}
+  SelectColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &1315917792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1145,7 +1159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescription: {fileID: 0}
+  SelectColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &1406958694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1385,7 +1399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescription: {fileID: 0}
+  SelectColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &1909937535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1473,7 +1487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a155c8ad0ad92c419df6acbba9d7fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyDescription: {fileID: 0}
+  SelectColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &2114200065
 BoxCollider2D:
   m_ObjectHideFlags: 0
