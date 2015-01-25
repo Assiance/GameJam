@@ -1465,7 +1465,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I am a fcking Hunter
+  m_Text: I am a hunter!
 --- !u!222 &457846675
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1647,7 +1647,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 18d1a732a54647946ada9a822e43dd06, type: 3}
   - {fileID: 8300000, guid: 5e2f16a926fc2804a9ee77367d3f0959, type: 3}
   - {fileID: 8300000, guid: 7ef60d3c710e893429a951f45424734b, type: 3}
-  - {fileID: 8300000, guid: d1064121f09eb1949b2656f9172605c2, type: 3}
+  - {fileID: 8300000, guid: 695ee409563cff6489e8cccb2486d1a5, type: 3}
   Volume: 100
   GamePrefsName: DefaultGame
 --- !u!1 &569895022

@@ -4,12 +4,12 @@ namespace Assets.GameJam.Scripts.Regular
 {
     public class MusicController : MonoBehaviour
     {
-        private float _volume;
+        private float _volume = 25f;
         private AudioSource _source;
         private GameObject _sourceGameObject;
         private int _fadeState;
         private int _targetFadeState;
-        private float _volumeOn = 100f;
+        private float _volumeOn = 50f;
         private float _targetVolume;
 
         public string GamePrefsName = "DefaultGame";
@@ -27,44 +27,12 @@ namespace Assets.GameJam.Scripts.Regular
             _source.playOnAwake = true;
             _source.clip = Music;
             _source.volume = _volume;
-
-            if (ShouldFadeInAtStart)
-            {
-                _fadeState = 0;
-                _volume = 0;
-            }
-            else
-            {
-                _fadeState = 1;
-                _volume = _volumeOn;
-            }
-
-            _targetFadeState = 1;
-            _targetVolume = _volumeOn;
-            _source.volume = _volume;
         }
 
         void Update()
         {
             if (!_source.isPlaying && LoopMusic)
                 _source.Play();
-
-            if (_fadeState != _targetFadeState)
-            {
-                if (_targetFadeState == 1)
-                {
-                    if (_volume == _volumeOn)
-                        _fadeState = 1;
-                }
-                else
-                {
-                    if (_volume == 0.0f)
-                        _fadeState = 0;
-                }
-
-                _volume = Mathf.Lerp(_volume, _targetVolume, Time.deltaTime * FadeTime);
-                _source.volume = _volume;
-            }
         }
 
         public void FadeIn(float fadeAmount)
