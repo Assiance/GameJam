@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Assets.GameJam.Scripts.Regular.Events
 {
-    public class BaseEvent :MyMonoBehaviour, IEvent
+    public class BaseEvent : MyMonoBehaviour, IEvent
     {
           public int ResourcesModifier=0;
           public int PopulationModifier = 0;

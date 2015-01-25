@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Assets.GameJam.Scripts.Regular.Events
 {
-    public class MonekyShowersEvent : BaseEvent
+    public class MonkeyShowersEvent : BaseEvent
     {
         public override void Execute()
         {
