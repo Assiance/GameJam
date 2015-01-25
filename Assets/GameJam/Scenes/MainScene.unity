@@ -1016,7 +1016,6 @@ MonoBehaviour:
   ResourcesText: {fileID: 265578339}
   MoraleText: {fileID: 1332398833}
   CharacterName: {fileID: 1723544496}
-  CharacterDescription: {fileID: 0}
   CharacterPortrait: {fileID: 0}
 --- !u!114 &864973291
 MonoBehaviour:
@@ -1058,6 +1057,7 @@ GameObject:
   - 222: {fileID: 889338793}
   - 114: {fileID: 889338792}
   - 114: {fileID: 889338791}
+  - 114: {fileID: 889338794}
   m_Layer: 5
   m_Name: ScoutButton
   m_TagString: Untagged
@@ -1120,7 +1120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 889338792}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 889338794}
+        m_MethodName: PrepareChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &889338792
@@ -1150,6 +1162,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 889338789}
+--- !u!114 &889338794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 889338789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c949309abca2243b924c0ab56821b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 0
+  PopulationModifier: 0
+  MoraleModifier: 0
 --- !u!1 &917845321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1187,7 @@ GameObject:
   - 222: {fileID: 917845325}
   - 114: {fileID: 917845324}
   - 114: {fileID: 917845323}
+  - 114: {fileID: 917845326}
   m_Layer: 5
   m_Name: WorshipButton
   m_TagString: Untagged
@@ -1223,7 +1250,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 917845324}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 917845326}
+        m_MethodName: PrepareChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &917845324
@@ -1253,6 +1292,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 917845321}
+--- !u!114 &917845326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 917845321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb13027b377cad34d860893c62b03a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 0
+  PopulationModifier: 0
+  MoraleModifier: 2
 --- !u!1 &968724014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,6 +1816,7 @@ GameObject:
   - 222: {fileID: 1182370122}
   - 114: {fileID: 1182370121}
   - 114: {fileID: 1182370120}
+  - 114: {fileID: 1182370123}
   m_Layer: 5
   m_Name: RaidButton
   m_TagString: Untagged
@@ -1825,7 +1879,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1182370121}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1182370123}
+        m_MethodName: PrepareChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1182370121
@@ -1855,6 +1921,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1182370118}
+--- !u!114 &1182370123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182370118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055d0317535466a4298ae3874127a3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 0
+  PopulationModifier: 0
+  MoraleModifier: 0
 --- !u!1 &1257060751
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,6 +3083,7 @@ GameObject:
   - 222: {fileID: 1993931717}
   - 114: {fileID: 1993931716}
   - 114: {fileID: 1993931715}
+  - 114: {fileID: 1993931718}
   m_Layer: 5
   m_Name: ForageButton
   m_TagString: Untagged
@@ -3065,7 +3146,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1993931716}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1993931718}
+        m_MethodName: PrepareChoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1993931716
@@ -3095,6 +3188,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1993931713}
+--- !u!114 &1993931718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1993931713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caa2dfe45f7ec14b9101cc130774e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourcesModifier: 2
+  PopulationModifier: 0
+  MoraleModifier: 0
 --- !u!1 &2103205976
 GameObject:
   m_ObjectHideFlags: 0
