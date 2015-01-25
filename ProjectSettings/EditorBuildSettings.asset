@@ -6,12 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/GameJam/Scenes/MainScene.unity
+    path: Assets/GameJam/Scenes/SplashScene.unity
   - enabled: 1
-    path: Assets/GameJam/Scenes/ConnectScene.unity
+    path: Assets/GameJam/Scenes/StoryScene.unity
   - enabled: 1
     path: Assets/GameJam/Scenes/CharacterScene.unity
   - enabled: 1
-    path: Assets/GameJam/Scenes/BradScene.unity
-  - enabled: 1
-    path: Assets/GameJam/Scenes/marlon.unity
+    path: Assets/GameJam/Scenes/MainScene.unity

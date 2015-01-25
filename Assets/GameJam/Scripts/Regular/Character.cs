@@ -12,13 +12,13 @@ namespace Assets.GameJam.Scripts.Regular
     {
         public MonkeyDescription MonkeyDescription;
 
-        private static int playerCount = 1;
+        private static int playerCount = 0;
 
         void Update()
         {
             if (playerCount == 4)
             {
-                Application.LoadLevel("GameScene");
+                Application.LoadLevel("MainScene");
             }
         }
 
@@ -65,9 +65,9 @@ namespace Assets.GameJam.Scripts.Regular
         }
 
 
-        public void chooseChar()
+        public void GoToCharacterScreen()
         {
-            int i = 0;
+            Application.LoadLevel("CharacterScene");
         }
   
 
