@@ -8,6 +8,7 @@ using Assets.GameJam.Scripts.Regular.Events;
 using Assets.GameJam.Scripts.Regular.General;
 using Assets.GameJam.Scripts.Regular.Scenarios;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.GameJam.Scripts.Regular.Controllers
 {
@@ -43,6 +44,13 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         public List<PlayerStatus> PlayerStats { get; set; }
         public List<BaseChoice> Choices { get; set; }
 
+        public Text PopulationText;
+        public Text ResourcesText;
+        public Text MoraleText;
+        public Text CharacterName;
+        public Text CharacterDescription;
+        public Image CharacterPortrait;
+
         void Start()
         {
             PlayerStats = new List<PlayerStatus>();
@@ -70,6 +78,30 @@ namespace Assets.GameJam.Scripts.Regular.Controllers
         public PlayerStatus GetPlayerStatsByNumber(int playerNumber)
         {
             return PlayerStats.First(i => i.PlayerId == playerNumber);
+        }
+
+        public PlayerStatus SetActivePlayer(int playerNumber)
+        {
+            var player = PlayerStats.First(i => i.PlayerId == playerNumber);
+
+            var monkeyDescription = GameController.Instance.MonkeyDescriptions[player.PlayerId];
+            PopulationText.text = player.Population.ToString();
+            ResourcesText.text = player.Resources.ToString();
+            MoraleText.text = player.Morale.ToString();
+            CharacterName.text = monkeyDescription.Name;
+            CharacterDescription.text = monkeyDescription.Description;
+
+            return player;
+        }
+
+        public void PlayerSwitch(PlayerStatus player)
+        {
+            var monkeyDescription = GameController.Instance.MonkeyDescriptions[player.PlayerId];
+            PopulationText.text = player.Population.ToString();
+            ResourcesText.text = player.Resources.ToString();
+            MoraleText.text = player.Morale.ToString();
+            CharacterName.text = monkeyDescription.Name;
+            CharacterDescription.text = monkeyDescription.Description;
         }
 
         IEnumerator DeathCheck()
