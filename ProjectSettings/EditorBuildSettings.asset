@@ -4,4 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/GameJam/Scenes/MainScene.unity
+  - enabled: 1
+    path: Assets/GameJam/Scenes/ConnectScene.unity
+  - enabled: 1
+    path: Assets/GameJam/Scenes/CharacterScene.unity
+  - enabled: 1
+    path: Assets/GameJam/Scenes/BradScene.unity
+  - enabled: 1
+    path: Assets/GameJam/Scenes/marlon.unity

@@ -308,8 +308,6 @@ GameObject:
   - 114: {fileID: 864973292}
   - 114: {fileID: 864973291}
   - 114: {fileID: 864973290}
-  - 114: {fileID: 864973295}
-  - 114: {fileID: 864973294}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -323,7 +321,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864973289}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b28f697ce61c4704284ff51e5356c61f, type: 3}
   m_Name: 
@@ -334,7 +332,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864973289}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53440c429216d5f4eb572d1e4a4cd0b0, type: 3}
   m_Name: 
@@ -365,29 +363,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!114 &864973294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 864973289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96094f4b7395a4249a924849f382324a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &864973295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 864973289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc0e0326fcf6b0146af30cfce0e003f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MasterServerIP: 169.254.110.43
 --- !u!1 &922822292
 GameObject:
   m_ObjectHideFlags: 0
